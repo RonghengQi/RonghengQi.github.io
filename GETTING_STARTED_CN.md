@@ -3,12 +3,12 @@
 这个目录已经基于 `academicpages/academicpages.github.io` 模板整理成个人学术主页骨架，并配置为发布到：
 
 ```text
-https://rqqqi.github.io
+https://ronghengqi.github.io
 ```
 
 ## 已配置的信息
 
-- GitHub 仓库：`rqqqi/rqqqi.github.io`
+- GitHub 仓库：`RonghengQi/RonghengQi.github.io`
 - 姓名：`Rongheng Qi`
 - 邮箱：`ronghengqi03@gmail.com`
 - 研究方向：GeoAI、remote sensing、flood susceptibility、disaster risk、urban analytics

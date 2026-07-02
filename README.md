@@ -29,8 +29,8 @@ Open `http://localhost:4000`.
 
 ## GitHub Pages Deployment
 
-Create a public repository named `rqqqi.github.io`, update `_config.yml` if needed, and push these files to the repository. GitHub Pages will build and publish the site at:
+Create a public repository named `RonghengQi.github.io`, update `_config.yml` if needed, and push these files to the repository. GitHub Pages will build and publish the site at:
 
 ```text
-https://rqqqi.github.io
+https://ronghengqi.github.io
 ```
