@@ -1,0 +1,104 @@
+{
+  "basics": {
+    "name": "Rongheng Qi",
+    "email": "ronghengqi03@gmail.com",
+    "phone": "",
+    "website": "https://rqqqi.github.io",
+    "summary": "Researcher in GeoAI, remote sensing, and disaster risk.",
+    "location": {
+      "address": "",
+      "postalCode": "",
+      "city": "",
+      "countryCode": "",
+      "region": "United Kingdom"
+    },
+    "profiles": [
+      {
+        "network": "Google Scholar",
+        "username": "",
+        "url": ""
+      },
+      {
+        "network": "ORCID",
+        "username": "",
+        "url": ""
+      },
+      {
+        "network": "GitHub",
+        "username": "rqqqi",
+        "url": "https://github.com/rqqqi"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "Institution or Lab",
+      "position": "Research role",
+      "startDate": "YYYY",
+      "endDate": "YYYY",
+      "summary": "Briefly describe your role and research contribution.",
+      "highlights": []
+    }
+  ],
+  "education": [
+    {
+      "institution": "University Name",
+      "area": "GeoAI, remote sensing, and disaster risk",
+      "studyType": "MRes / Master's research",
+      "startDate": "YYYY",
+      "endDate": "YYYY",
+      "gpa": null,
+      "courses": []
+    }
+  ],
+  "skills": [
+    {
+      "name": "Methods and tools",
+      "keywords": ["Python", "R", "GIS", "Remote sensing", "Machine learning", "Model interpretation"]
+    }
+  ],
+  "languages": [],
+  "interests": [
+    {
+      "name": "Research interests",
+      "keywords": ["GeoAI", "Remote sensing", "Flood susceptibility", "Disaster risk", "Urban analytics"]
+    }
+  ],
+  "references": [],
+  "publications": [
+    {
+      "name": "Publication Title",
+      "publisher": "Journal or Conference Name",
+      "releaseDate": "2026-01-01",
+      "website": "",
+      "summary": "One-sentence summary of the paper."
+    }
+  ],
+  "presentations": [
+    {
+      "name": "Talk Title",
+      "event": "Conference or Seminar Name",
+      "date": "2026-01-01",
+      "location": "City, Country",
+      "description": "Short talk description."
+    }
+  ],
+  "teaching": [
+    {
+      "course": "Course or Teaching Activity",
+      "institution": "University or Organization",
+      "date": "2026-01-01",
+      "role": "Teaching assistant / Instructor / Workshop",
+      "description": "Short teaching description."
+    }
+  ],
+  "portfolio": [
+    {
+      "name": "Project Title",
+      "category": "portfolio",
+      "date": "",
+      "url": "",
+      "description": "One-sentence project summary."
+    }
+  ]
+}
