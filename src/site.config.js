@@ -101,8 +101,13 @@ export const site = {
 if (process.env.SITE_URL) site.url = process.env.SITE_URL.replace(/^http:/, "https:");
 if (process.env.BASE_PATH) site.base = process.env.BASE_PATH;
 
-// Absolute URL for a path, honouring `base`. Use for canonical/OG/sitemap
+// Absolute URL for a path, honouring `base`. Use for canonical and sitemap
 // links, which must be absolute.
+//
+// `path` is relative to the site root as you write it in your own links —
+// "/" or "cv.pdf". Do not pass a path Astro generated (an image src, an
+// `import.meta.env.BASE_URL` join): those already carry `base`, and this
+// would add it a second time.
 export function absoluteUrl(path = "") {
   const origin = site.url.replace(/\/+$/, "");
   const base = `/${site.base}/`.replace(/\/+/g, "/");

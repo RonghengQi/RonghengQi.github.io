@@ -29,7 +29,9 @@ const ogImage = await getImage({
   width: 900,
   height: 1080,
 });
-const ogImageUrl = absoluteUrl(ogImage.src);
+// Astro already puts `base` in front of the path it hands back, so this joins
+// against the origin only — absoluteUrl() would prepend `base` a second time.
+const ogImageUrl = new URL(ogImage.src, site.url).href;
 
 // With `theme.default: "system"` the attribute is left off and the inline
 // script below fills it in from the visitor's OS setting or their saved
