@@ -1,17 +1,47 @@
+<div align="center">
+
 # academic-homepage
 
-用 Astro 写的单页学术主页模板：改一个文件，推到 GitHub Pages 就能上线。
-
-[**在线演示**](https://siruizou.com/academic-homepage/) ·
-[**用这个模板建仓库**](https://github.com/siruizou2005/academic-homepage/generate) ·
+[![Stars](https://img.shields.io/github/stars/siruizou2005/academic-homepage?style=flat-square&logo=github&color=0088b0)](https://github.com/siruizou2005/academic-homepage/stargazers)
+[![Forks](https://img.shields.io/github/forks/siruizou2005/academic-homepage?style=flat-square&logo=github&color=0088b0)](https://github.com/siruizou2005/academic-homepage/network/members)
+[![Issues](https://img.shields.io/github/issues/siruizou2005/academic-homepage?style=flat-square&color=0088b0)](https://github.com/siruizou2005/academic-homepage/issues)
+[![License](https://img.shields.io/badge/license-MIT-0088b0?style=flat-square)](LICENSE)
+&nbsp;|&nbsp;
 [English](README.md)
 
-<p align="center">
-  <img src="docs/screenshot-light.jpg" width="49%" alt="浅色模式" />
-  <img src="docs/screenshot-dark.jpg" width="49%" alt="深色模式" />
-</p>
+### 快、干净的单页学术主页 —— 用 Astro 构建
 
----
+改一个文件，推到 GitHub Pages 就能上线。
+
+<img src="docs/hero-devices.png" alt="模板在显示器、平板、手机和笔记本上的样子，笔记本显示的是深色模式" width="100%">
+
+[**在线演示**](https://siruizou.com/academic-homepage/) &nbsp;·&nbsp;
+[**用这个模板建仓库**](https://github.com/siruizou2005/academic-homepage/generate)
+
+<br>
+
+<img src="docs/lighthouse.png" alt="Lighthouse：性能 100、无障碍 100、最佳实践 100、SEO 100" width="660">
+
+<sub>Lighthouse 13.4.1，移动端，跑的是上面那个线上演示页——这是当前分数，不是目标。<br>
+自己验证：<code>npx lighthouse https://siruizou.com/academic-homepage/</code></sub>
+
+</div>
+
+## 适合谁
+
+这个模板是给学术生涯早期的人做的——本科生、硕博在读、博士后，或者刚工作
+一两年的研究者。在这个阶段，你的全部履历放得进一页：几篇论文、几个项目、
+一些教学经历。整个设计就是围绕这一点来的：访客不用点任何东西，一分钟能把
+你看完。
+
+履历长了就不合适了。当你有三十篇论文、多年的报告和相应的教学记录时，
+单页滚动就不再帮你了——论文列表会把其余内容全部淹没，访客也没有办法直接
+跳到他要找的部分。那时候你需要的是每个板块一个页面的模板，
+[al-folio](https://github.com/alshedivat/al-folio) 或
+[academicpages](https://github.com/academicpages/academicpages.github.io)
+会更适合你。内容再多这个模板也不会坏，只是它帮不上忙了。
+
+## 特点
 
 大多数学术主页模板要求你先学会它的一套布局系统，才能把自己的名字放上去。
 这个模板只要求你改一个列表。
@@ -30,11 +60,9 @@ export const publications = [
 ];
 ```
 
-这段数据会渲染成一条论文条目：可展开的 Abstract 面板、带复制按钮的 BibTeX 面板、
-以及一排方框链接。把数组清空，Publications 整个板块就消失。页面上每个板块
-都是这样工作的。
-
-## 特点
+这段数据会渲染成一条论文条目：可展开的 Abstract 面板、带复制按钮的 BibTeX
+面板、以及一排方框链接。把数组清空，Publications 整个板块就消失。页面上每个
+板块都是这样工作的。
 
 - **只改一个文件**：姓名、链接、About、News、教育经历、论文、科研经历、项目、
   获奖、教学，全部在 `src/data.js` 里。
@@ -49,31 +77,15 @@ export const publications = [
   结构化数据，以及自动生成的 `robots.txt` 和 `sitemap.xml`。
 - **不执行 JS 的爬虫也能读到摘要**：Abstract 一开始就在 HTML 里，脚本只负责
   折叠它。
-- **推送即部署**：GitHub Actions 会读取你的 Pages 设置，自定义域名和项目页
-  子路径都不用手动配置。
 - **LaTeX 简历放在同一个仓库**，简历和链接到它的主页不会各改各的。
 - **可访问性**：真实的焦点框、达到 WCAG AA 的文字对比度、按钮就是按钮。
-
-## 适合谁
-
-这个模板是给学术生涯早期的人做的——本科生、硕博在读、博士后，或者刚工作
-一两年的研究者。在这个阶段，你的全部履历放得进一页：几篇论文、几个项目、
-一些教学经历。整个设计就是围绕这一点来的：访客不用点任何东西，一分钟能把
-你看完。
-
-履历长了就不合适了。当你有三十篇论文、多年的报告和相应的教学记录时，
-单页滚动就不再帮你了——论文列表会把其余内容全部淹没，访客也没有办法直接
-跳到他要找的部分。那时候你需要的是每个板块一个页面的模板，
-[al-folio](https://github.com/alshedivat/al-folio) 或
-[academicpages](https://github.com/academicpages/academicpages.github.io)
-会更适合你。内容再多这个模板也不会坏，只是它帮不上忙了。
 
 ## 快速开始
 
 需要 [Node.js](https://nodejs.org) 20 或更高版本。
 
 ```bash
-# 1. 拷一份（或者在 GitHub 上点 "Use this template"）
+# 1. 拷一份（或者点上面的 "Use this template"）
 npx degit siruizou2005/academic-homepage my-homepage
 cd my-homepage
 
@@ -173,35 +185,7 @@ npm run subset:cn -- 張三 --family "Noto Serif TC"
 它会重新生成 `public/fonts/cjk-name-subset.woff2`，通常 1–2 KB。
 `nameCn` 留空时，字体文件和 `@font-face` 都不会输出。
 
-## 部署
-
-### GitHub Pages
-
-1. 推到 GitHub 仓库。
-2. **Settings → Pages → Source 选 GitHub Actions**。这是唯一需要手动做的一步，
-   因为创建 Pages 站点需要的权限，无法授予工作流内置的那个 token。
-3. 推到 `main` 分支，`.github/workflows/deploy.yml` 会自动构建并发布。
-
-工作流会读取你的 Pages 设置并把真实地址传进构建，所以下面三种情况都不用改配置，
-canonical、分享卡片和 sitemap 都是对的：
-
-| 站点位置 | 你要做的 |
-| --- | --- |
-| `你的用户名.github.io` | 仓库名就叫 `你的用户名.github.io`，其余不用管 |
-| `你的用户名.github.io/仓库名/` | 什么都不用做，子路径会被自动识别 |
-| 自定义域名 | 在 Settings → Pages 里设好，并新建 `public/CNAME`，里面只写一行域名 |
-
-`public/CNAME` 是自定义域名在每次部署后仍然生效的原因——用自定义域名的话，
-千万别删这个文件。
-
-本地构建和其他托管平台，请在 `src/site.config.js` 里设置 `url` 和 `base`。
-
-### 其他平台
-
-`npm run build` 产出纯静态的 `dist/`。Netlify、Vercel、Cloudflare Pages、
-自建 nginx 都可以直接托管，没有服务端。
-
-## 目录结构
+### 目录结构
 
 ```
 src/
@@ -227,17 +211,43 @@ cv/cv.tex            简历的 LaTeX 源码
 scripts/             中文字体子集脚本
 ```
 
-## 一些设计取舍
+有两个取舍值得说明。**摘要写在 HTML 里**，是因为 Google、Semantic Scholar
+以及越来越多的 LLM 爬虫只读服务器返回的内容，点击后才渲染的面板对它们不存在；
+所以两个面板一开始就带 `hidden` 输出，脚本只负责切换。**分享图是 JPEG**，
+因为页面上的头像是 WebP，而微信和 LinkedIn 对 WebP 的链接预览支持并不稳定。
 
-**为什么摘要要写在 HTML 里**：Google、Semantic Scholar 以及越来越多的 LLM 爬虫
-只读服务器返回的内容。点击后才渲染的面板对它们是不存在的，所以两个面板一开始
-就在 HTML 里（带 `hidden`），脚本只负责切换。
+## 部署
 
-**为什么分享图是 JPEG**：页面上的头像是 WebP，但微信和 LinkedIn 对 WebP 的
-支持并不稳定，所以从同一张原图另外生成一份 JPEG 专供 `og:image`。
+### GitHub Pages
 
-**浏览器支持**：主题系统用了 CSS `light-dark()`（2024 年起被主流浏览器支持）。
-更老的浏览器会退回浅色配色，而不是显示异常。
+1. 推到 GitHub 仓库。
+2. **Settings → Pages → Source 选 GitHub Actions**。这是唯一需要手动做的一步，
+   因为创建 Pages 站点需要的权限，无法授予工作流内置的那个 token。
+3. 推到 `main` 分支，`.github/workflows/deploy.yml` 会自动构建并发布。
+
+工作流会读取你的 Pages 设置并把真实地址传进构建，所以下面三种情况都不用改配置，
+canonical、分享卡片和 sitemap 都是对的：
+
+| 站点位置 | 你要做的 |
+| --- | --- |
+| `你的用户名.github.io` | 仓库名就叫 `你的用户名.github.io`，其余不用管 |
+| `你的用户名.github.io/仓库名/` | 什么都不用做，子路径会被自动识别 |
+| 自定义域名 | 在 Settings → Pages 里设好，并新建 `public/CNAME`，里面只写一行域名 |
+
+`public/CNAME` 是自定义域名在每次部署后仍然生效的原因——用自定义域名的话，
+千万别删这个文件。
+
+有一点值得提前知道：如果你的 `你的用户名.github.io` 仓库绑了自定义域名，
+GitHub 会把这个账号下**所有** project pages 都改从那个域名走，本模板就会落在
+`你的域名.com/仓库名/`，而 `github.io` 的地址会 301 跳过去。上面那个演示页
+之所以在 `siruizou.com` 的路径下，就是这个原因。
+
+本地构建和其他托管平台，请在 `src/site.config.js` 里设置 `url` 和 `base`。
+
+### 其他平台
+
+`npm run build` 产出纯静态的 `dist/`。Netlify、Vercel、Cloudflare Pages、
+自建 nginx 都可以直接托管，没有服务端。
 
 ## 用了这个模板的主页
 
@@ -251,7 +261,8 @@ scripts/             中文字体子集脚本
 基于 [Astro](https://astro.build) 构建。正文字体
 [Source Serif 4](https://fonts.google.com/specimen/Source+Serif+4)，
 中文名用 [Noto Serif SC](https://fonts.google.com/noto/specimen/Noto+Serif+SC)，
-均为 SIL 开放字体许可证。
+均为 SIL 开放字体许可证。README 顶部的设备外框来自
+[devices.css](https://github.com/picturepan2/devices.css)（MIT）。
 
 仓库里的所有内容都是虚构人物的占位数据——没有任何真实姓名、论文或链接。
 

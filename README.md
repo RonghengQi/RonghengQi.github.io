@@ -1,18 +1,51 @@
+<div align="center">
+
 # academic-homepage
 
-A fast, single-page academic homepage template built with Astro. Edit one file,
-deploy to GitHub Pages.
+[![Stars](https://img.shields.io/github/stars/siruizou2005/academic-homepage?style=flat-square&logo=github&color=0088b0)](https://github.com/siruizou2005/academic-homepage/stargazers)
+[![Forks](https://img.shields.io/github/forks/siruizou2005/academic-homepage?style=flat-square&logo=github&color=0088b0)](https://github.com/siruizou2005/academic-homepage/network/members)
+[![Issues](https://img.shields.io/github/issues/siruizou2005/academic-homepage?style=flat-square&color=0088b0)](https://github.com/siruizou2005/academic-homepage/issues)
+[![License](https://img.shields.io/badge/license-MIT-0088b0?style=flat-square)](LICENSE)
+&nbsp;|&nbsp;
+[中文文档](README.zh-CN.md)
 
-[**Live demo**](https://siruizou.com/academic-homepage/) ·
-[**Use this template**](https://github.com/siruizou2005/academic-homepage/generate) ·
-[中文说明](README.zh-CN.md)
+### A fast, single-page academic homepage — built with Astro
 
-<p align="center">
-  <img src="docs/screenshot-light.jpg" width="49%" alt="The template in light mode" />
-  <img src="docs/screenshot-dark.jpg" width="49%" alt="The template in dark mode" />
-</p>
+Edit one file, deploy to GitHub Pages.
 
----
+<img src="docs/hero-devices.png" alt="The template shown on a desktop monitor, tablet, phone and laptop; the laptop is in dark mode" width="100%">
+
+[**Live demo**](https://siruizou.com/academic-homepage/) &nbsp;·&nbsp;
+[**Use this template**](https://github.com/siruizou2005/academic-homepage/generate)
+
+<br>
+
+<img src="docs/lighthouse.png" alt="Lighthouse: Performance 100, Accessibility 100, Best Practices 100, SEO 100" width="660">
+
+<sub>Lighthouse 13.4.1, mobile, run against the live demo — the current score, not a target.<br>
+Reproduce it: <code>npx lighthouse https://siruizou.com/academic-homepage/</code></sub>
+
+</div>
+
+## Who it is for
+
+This is a template for the early part of an academic career — an
+undergraduate, a master's or Ph.D. student, a postdoc, someone a few years
+into a first position. At that stage the whole record fits on one page: a
+handful of papers, a few projects, some teaching. Everything here is built
+around that, because a visitor should be able to read all of it in a minute
+without clicking anything.
+
+It is the wrong shape for a long record. Once you have thirty publications,
+years of talks and a teaching history to match, a single scrolling page stops
+helping — the publication list swallows everything else, and a visitor has no
+way to jump to what they came for. At that point you want a template with a
+page per section, and [al-folio](https://github.com/alshedivat/al-folio) or
+[academicpages](https://github.com/academicpages/academicpages.github.io) will
+serve you better. Nothing here breaks at that size; it just stops doing you
+any favours.
+
+## What you get
 
 Most academic homepage templates ask you to learn their layout system before
 you can put your name on a page. This one asks you to edit a list.
@@ -35,8 +68,6 @@ That renders a paper with an Abstract panel, a BibTeX panel with a copy
 button, and outlined links. Empty the array and the Publications section
 disappears. Every section on the page works the same way.
 
-## What you get
-
 - **One file to edit.** Name, links, About, news, education, papers,
   experience, projects, awards, teaching — all of it is `src/data.js`.
 - **Sections that manage themselves.** An empty list hides its heading. No
@@ -53,37 +84,17 @@ disappears. Every section on the page works the same way.
   `sitemap.xml`.
 - **Readable to crawlers that do not run JavaScript.** Abstracts are in the
   HTML from the start; the script only folds them away.
-- **Deploys on push.** A GitHub Actions workflow that reads your Pages
-  settings, so custom domains and project-page sub-paths work with no config.
 - **A LaTeX CV in the same repository**, so the CV and the page linking to it
   stay in step.
 - **Accessible.** Real focus rings, text contrast at WCAG AA or better,
   buttons that are buttons.
-
-## Who it is for
-
-This is a template for the early part of an academic career — an
-undergraduate, a master's or Ph.D. student, a postdoc, someone a few years
-into a first position. At that stage the whole record fits on one page: a
-handful of papers, a few projects, some teaching. Everything here is built
-around that, because a visitor should be able to read all of it in a minute
-without clicking anything.
-
-It is the wrong shape for a long record. Once you have thirty publications,
-years of talks and a teaching history to match, a single scrolling page stops
-helping — the publication list swallows everything else, and a visitor has no
-way to jump to what they came for. At that point you want a template with a
-page per section, and [al-folio](https://github.com/alshedivat/al-folio) or
-[academicpages](https://github.com/academicpages/academicpages.github.io) will
-serve you better. Nothing here breaks at that size; it just stops doing you
-any favours.
 
 ## Quick start
 
 You need [Node.js](https://nodejs.org) 20 or newer.
 
 ```bash
-# 1. take a copy (or press "Use this template" on GitHub)
+# 1. take a copy (or press "Use this template" above)
 npx degit siruizou2005/academic-homepage my-homepage
 cd my-homepage
 
@@ -189,38 +200,7 @@ npm run subset:cn -- 張三 --family "Noto Serif TC"
 That rewrites `public/fonts/cjk-name-subset.woff2`, typically 1–2 KB. Leave
 `nameCn` empty and neither the font nor its `@font-face` is emitted.
 
-## Deploying
-
-### GitHub Pages
-
-1. Push to a GitHub repository.
-2. **Settings → Pages → Source: GitHub Actions.** This is the one manual step,
-   and it exists because creating a Pages site needs a permission the built-in
-   Actions token cannot be granted.
-3. Push to `main`. `.github/workflows/deploy.yml` builds and publishes.
-
-The workflow reads your Pages settings and passes the real URL into the
-build, so canonical links, social cards and the sitemap are correct for all
-three cases without editing anything:
-
-| Where it lives | What you do |
-| --- | --- |
-| `you.github.io` | Name the repository `you.github.io`. Nothing else. |
-| `you.github.io/repo/` | Nothing — the sub-path is detected. |
-| Custom domain | Set it in Settings → Pages, and add `public/CNAME` containing one line: your domain. |
-
-`public/CNAME` is what keeps a custom domain bound across deploys — if you use
-one, do not delete that file.
-
-For local builds and other hosts, set `url` and `base` in
-`src/site.config.js`.
-
-### Anywhere else
-
-`npm run build` writes a static `dist/`. Netlify, Vercel, Cloudflare Pages and
-plain nginx all serve it as-is; there is no server side.
-
-## How it is put together
+### How it is put together
 
 ```
 src/
@@ -246,34 +226,64 @@ cv/cv.tex            LaTeX source for the CV
 scripts/             the CJK subsetting script
 ```
 
-## Notes
+Two decisions worth knowing about. **The abstract is in the HTML** because
+Google, Semantic Scholar and the growing number of LLM crawlers read what the
+server sends; a panel rendered only after a click is invisible to them, so
+both panels ship with `hidden` and the script does nothing but toggle it.
+**The social card is a JPEG** because the avatar on the page is WebP, which
+WeChat and LinkedIn do not reliably render in link previews.
 
-**Why the abstract is in the HTML.** Google, Semantic Scholar and the growing
-number of LLM crawlers read what the server sends. A panel rendered only after
-a click is invisible to them, so both panels are present with `hidden` and the
-script does nothing but toggle it.
+## Deploying
 
-**Why the social card is a JPEG.** The avatar on the page is WebP. WeChat and
-LinkedIn do not reliably render WebP in link previews, so a JPEG copy is
-generated from the same source purely for `og:image`.
+### GitHub Pages
 
-**Browser support.** The theme system uses CSS `light-dark()`, supported since
-2024. Older browsers fall back to the light palette rather than breaking.
+1. Push to a GitHub repository.
+2. **Settings → Pages → Source: GitHub Actions.** This is the one manual step,
+   and it exists because creating a Pages site needs a permission the built-in
+   Actions token cannot be granted.
+3. Push to `main`. `.github/workflows/deploy.yml` builds and publishes.
+
+The workflow reads your Pages settings and passes the real URL into the
+build, so canonical links, social cards and the sitemap are correct for all
+three cases without editing anything:
+
+| Where it lives | What you do |
+| --- | --- |
+| `you.github.io` | Name the repository `you.github.io`. Nothing else. |
+| `you.github.io/repo/` | Nothing — the sub-path is detected. |
+| Custom domain | Set it in Settings → Pages, and add `public/CNAME` containing one line: your domain. |
+
+`public/CNAME` is what keeps a custom domain bound across deploys — if you use
+one, do not delete that file.
+
+One wrinkle worth knowing: if your `you.github.io` repository has a custom
+domain, GitHub serves *every* project page on the account from that domain, so
+this template lands at `your-domain.com/repo/` and the `github.io` address
+redirects there. That is why the demo above lives on a `siruizou.com` path.
+
+For local builds and other hosts, set `url` and `base` in
+`src/site.config.js`.
+
+### Anywhere else
+
+`npm run build` writes a static `dist/`. Netlify, Vercel, Cloudflare Pages and
+plain nginx all serve it as-is; there is no server side.
 
 ## Pages built with it
 
 Using the template? Open a pull request adding a line here — a link to your
 page is the most useful documentation this repository can have.
 
-- [The demo](https://siruizou.com/academic-homepage/) — placeholder
-  content, always current with `main`
+- [The demo](https://siruizou.com/academic-homepage/) — placeholder content,
+  always current with `main`
 
 ## Credits
 
 Built with [Astro](https://astro.build). Body text is
 [Source Serif 4](https://fonts.google.com/specimen/Source+Serif+4); a CJK name
 uses [Noto Serif SC](https://fonts.google.com/noto/specimen/Noto+Serif+SC).
-Both are under the SIL Open Font License.
+Both are under the SIL Open Font License. The device frames at the top of this
+page come from [devices.css](https://github.com/picturepan2/devices.css) (MIT).
 
 Everything in this repository is placeholder content for a fictional
 researcher — no real names, papers or links.
