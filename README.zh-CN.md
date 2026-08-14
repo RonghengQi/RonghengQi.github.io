@@ -2,7 +2,7 @@
 
 用 Astro 写的单页学术主页模板：改一个文件，推到 GitHub Pages 就能上线。
 
-[**在线演示**](https://siruizou2005.github.io/academic-homepage/) ·
+[**在线演示**](https://siruizou.com/academic-homepage/) ·
 [**用这个模板建仓库**](https://github.com/siruizou2005/academic-homepage/generate) ·
 [English](README.md)
 
@@ -243,7 +243,7 @@ scripts/             中文字体子集脚本
 
 用了的话，欢迎提一个 PR 把你的主页加到这里——一个真实链接比任何文档都有说服力。
 
-- [演示页](https://siruizou2005.github.io/academic-homepage/)——占位内容，
+- [演示页](https://siruizou.com/academic-homepage/)——占位内容，
   始终与 `main` 同步
 
 ## 致谢

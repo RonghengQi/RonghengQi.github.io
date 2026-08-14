@@ -3,7 +3,7 @@
 A fast, single-page academic homepage template built with Astro. Edit one file,
 deploy to GitHub Pages.
 
-[**Live demo**](https://siruizou2005.github.io/academic-homepage/) ·
+[**Live demo**](https://siruizou.com/academic-homepage/) ·
 [**Use this template**](https://github.com/siruizou2005/academic-homepage/generate) ·
 [中文说明](README.zh-CN.md)
 
@@ -265,7 +265,7 @@ generated from the same source purely for `og:image`.
 Using the template? Open a pull request adding a line here — a link to your
 page is the most useful documentation this repository can have.
 
-- [The demo](https://siruizou2005.github.io/academic-homepage/) — placeholder
+- [The demo](https://siruizou.com/academic-homepage/) — placeholder
   content, always current with `main`
 
 ## Credits

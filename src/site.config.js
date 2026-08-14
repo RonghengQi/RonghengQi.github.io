@@ -92,7 +92,13 @@ export const site = {
 // all — and passes the result in here, so a fresh clone produces correct
 // absolute links before you have edited a single line. Local builds and other
 // hosts fall back to the values above.
-if (process.env.SITE_URL) site.url = process.env.SITE_URL;
+// The http → https rewrite is deliberate: GitHub reports a custom domain as
+// http:// until "Enforce HTTPS" is switched on in the Pages settings, while
+// serving the site over https either way. A canonical link pointing at http
+// is a real SEO cost, so the scheme is corrected here rather than left to be
+// noticed later. It applies only to the URL the workflow supplies, never to
+// the one written above.
+if (process.env.SITE_URL) site.url = process.env.SITE_URL.replace(/^http:/, "https:");
 if (process.env.BASE_PATH) site.base = process.env.BASE_PATH;
 
 // Absolute URL for a path, honouring `base`. Use for canonical/OG/sitemap
