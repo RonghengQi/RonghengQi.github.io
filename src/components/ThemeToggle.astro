@@ -5,7 +5,11 @@
 // the button reads correctly even before this script runs.
 ---
 
-<button type="button" class="theme-toggle" data-theme-toggle aria-live="polite">
+{/* No aria-label: the visible text is the accessible name. An aria-label of
+    "Switch to dark theme" over a button reading "Dark mode" fails WCAG 2.5.3
+    (Label in Name) — someone using voice control says what they can see, and
+    "click Dark mode" would not match. */}
+<button type="button" class="theme-toggle" data-theme-toggle>
   <span class="when-light">
     <svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true">
       <path
@@ -31,11 +35,6 @@
   const button = document.querySelector("[data-theme-toggle]");
   const media = matchMedia("(prefers-color-scheme: dark)");
 
-  const label = () => {
-    const next = root.dataset.theme === "dark" ? "light" : "dark";
-    button.setAttribute("aria-label", `Switch to ${next} theme`);
-  };
-
   button?.addEventListener("click", () => {
     const next = root.dataset.theme === "dark" ? "light" : "dark";
     root.dataset.theme = next;
@@ -44,7 +43,6 @@
     } catch {
       /* private mode: the choice just does not persist */
     }
-    label();
   });
 
   // Until a choice is made, keep following the operating system live.
@@ -55,11 +53,6 @@
     } catch {
       /* ignore */
     }
-    if (!saved) {
-      root.dataset.theme = e.matches ? "dark" : "light";
-      label();
-    }
+    if (!saved) root.dataset.theme = e.matches ? "dark" : "light";
   });
-
-  label();
 </script>
