@@ -20,10 +20,10 @@ Edit one file, deploy to GitHub Pages.
 
 <br>
 
-<img src="docs/lighthouse.png" alt="Lighthouse: Performance 100, Accessibility 100, Best Practices 100, SEO 100" width="660">
+<a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fsiruizou.com%2Facademic-homepage%2F&form_factor=mobile"><img src="docs/lighthouse.png" alt="Lighthouse: Performance 100, Accessibility 100, Best Practices 100, SEO 100" width="660"></a>
 
-<sub>Lighthouse 13.4.1, mobile, run against the live demo — the current score, not a target.<br>
-Reproduce it: <code>npx lighthouse https://siruizou.com/academic-homepage/</code></sub>
+<sub>Mobile, against the live demo — the current score, not a target.<br>
+Don't take my word for it: <a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fsiruizou.com%2Facademic-homepage%2F&form_factor=mobile">run it on PageSpeed Insights</a> (the link starts a fresh test), or <code>npx lighthouse https://siruizou.com/academic-homepage/</code> locally.</sub>
 
 </div>
 

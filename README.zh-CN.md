@@ -20,10 +20,10 @@
 
 <br>
 
-<img src="docs/lighthouse.png" alt="Lighthouse：性能 100、无障碍 100、最佳实践 100、SEO 100" width="660">
+<a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fsiruizou.com%2Facademic-homepage%2F&form_factor=mobile"><img src="docs/lighthouse.png" alt="Lighthouse：性能 100、无障碍 100、最佳实践 100、SEO 100" width="660"></a>
 
-<sub>Lighthouse 13.4.1，移动端，跑的是上面那个线上演示页——这是当前分数，不是目标。<br>
-自己验证：<code>npx lighthouse https://siruizou.com/academic-homepage/</code></sub>
+<sub>移动端，跑的是上面那个线上演示页——这是当前分数，不是目标。<br>
+别信我，自己验证：<a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fsiruizou.com%2Facademic-homepage%2F&form_factor=mobile">用 PageSpeed Insights 跑一次</a>（点开就是新测），或者本地跑 <code>npx lighthouse https://siruizou.com/academic-homepage/</code>。</sub>
 
 </div>
 
