@@ -317,12 +317,18 @@ section hr {
   margin: 2px 0 0;
 }
 
-/* The row of outlined buttons under a paper: Abstract / Paper / BibTeX */
-.pub-actions {
+/* The row of outlined buttons under a paper (Abstract / Paper / BibTeX) or
+   under an entry (Code / Website / Docs). One style for both, so a project
+   with a repo reads like a paper with a PDF. */
+.pub-actions,
+.entry-actions {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
   margin-top: 12px;
+}
+.entry-actions {
+  margin-top: 10px;
 }
 .pill {
   display: inline-flex;
@@ -383,6 +389,11 @@ section hr {
   display: flex;
   flex-direction: column;
   gap: 20px;
+}
+/* A list whose entries carry buttons needs more room between them: 20px reads
+   as "same entry" once there is a button row above it. */
+.entries:has(.entry-actions) {
+  gap: 30px;
 }
 .entry {
   display: grid;

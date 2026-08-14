@@ -228,7 +228,13 @@ export const projects = [
     desc: "An open-source toolkit that turns government documents into a structured policy database, with a fine-tuned classifier for screening and an LLM extraction stage for attributes.",
     role: "Author and maintainer · 1.2k stars",
     date: "2024 – Present",
-    links: [{ label: "Code", href: "https://github.com/example" }],
+    // Each entry becomes an outlined button, in the order you list them.
+    // Label them for what they are: Code, Website, Docs, Demo, Slides, Data.
+    links: [
+      { label: "Code", href: "https://github.com/example" },
+      { label: "Docs", href: "https://example.com/docs" },
+      { label: "Website", href: "https://example.com" },
+    ],
   },
   {
     org: "thinmarket",
@@ -237,7 +243,7 @@ export const projects = [
     date: "2024",
     links: [
       { label: "Code", href: "https://github.com/example" },
-      { label: "Docs", href: "https://example.com/docs" },
+      { label: "Demo", href: "https://example.com/demo" },
     ],
   },
 ];
