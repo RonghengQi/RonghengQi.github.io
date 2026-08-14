@@ -193,10 +193,11 @@ That rewrites `public/fonts/cjk-name-subset.woff2`, typically 1–2 KB. Leave
 
 ### GitHub Pages
 
-Push to `main` and `.github/workflows/deploy.yml` does the rest — the first
-run switches Pages on for the repository itself. If your organisation blocks
-that, set **Settings → Pages → Source: GitHub Actions** by hand and push
-again.
+1. Push to a GitHub repository.
+2. **Settings → Pages → Source: GitHub Actions.** This is the one manual step,
+   and it exists because creating a Pages site needs a permission the built-in
+   Actions token cannot be granted.
+3. Push to `main`. `.github/workflows/deploy.yml` builds and publishes.
 
 The workflow reads your Pages settings and passes the real URL into the
 build, so canonical links, social cards and the sitemap are correct for all

@@ -1,9 +1,9 @@
 name: Deploy to GitHub Pages
 
-# Every push to main rebuilds and republishes the site. The first run switches
-# Pages on for the repository by itself; no setup needed unless your
-# organisation blocks that, in which case set Settings → Pages → Source:
-# GitHub Actions by hand.
+# One-time setup: Settings → Pages → Source: GitHub Actions. (The workflow
+# cannot do this for you — creating a Pages site needs a permission the
+# built-in Actions token cannot be granted.)
+# After that, every push to main rebuilds and republishes the site.
 
 on:
   push:
@@ -30,15 +30,13 @@ jobs:
           node-version: '24'
           cache: 'npm'
 
-      # Turns Pages on if it is not on yet, then reports the URL the site will
-      # be served from — custom domain included. The build step below uses it,
-      # so canonical links, social cards and the sitemap are right without
-      # anyone editing a config file first.
+      # Reads your Pages settings and reports the URL the site will be served
+      # from — custom domain included. The build step below uses it, so
+      # canonical links, social cards and the sitemap are right without anyone
+      # editing a config file first.
       - name: Detect the Pages URL
         id: pages
         uses: actions/configure-pages@v5
-        with:
-          enablement: true
 
       - name: Install dependencies
         run: npm ci

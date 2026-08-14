@@ -177,9 +177,10 @@ npm run subset:cn -- 張三 --family "Noto Serif TC"
 
 ### GitHub Pages
 
-推到 `main` 分支就行，`.github/workflows/deploy.yml` 会完成剩下的事——
-第一次运行时它会自己把 Pages 打开。如果你的组织禁止这样做，
-手动设置 **Settings → Pages → Source 选 GitHub Actions**，然后重新推一次。
+1. 推到 GitHub 仓库。
+2. **Settings → Pages → Source 选 GitHub Actions**。这是唯一需要手动做的一步，
+   因为创建 Pages 站点需要的权限，无法授予工作流内置的那个 token。
+3. 推到 `main` 分支，`.github/workflows/deploy.yml` 会自动构建并发布。
 
 工作流会读取你的 Pages 设置并把真实地址传进构建，所以下面三种情况都不用改配置，
 canonical、分享卡片和 sitemap 都是对的：
