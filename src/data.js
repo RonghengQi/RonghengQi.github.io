@@ -23,7 +23,6 @@ export const profile = {
       href: "https://github.com/RonghengQi",
       newTab: true,
     },
-    { label: "Google Scholar", href: "https://scholar.google.com/" },
     { label: "CV (PDF)", href: CV_URL, newTab: true },
   ],
 };
@@ -58,14 +57,7 @@ export const news = [
   },
   {
     date: "Sep 2025",
-    text: `Started as a research intern at the Example Institute for Economic
-           Research.`,
-  },
-  {
-    date: "Jun 2025",
-    text: `Released <a href="https://github.com/example">policy-parse</a>, an
-           open-source toolkit for extracting structured policy attributes
-           from government documents.`,
+    text: `Started as an MRes student at UCL.`,
   },
 ];
 
@@ -78,8 +70,8 @@ export const education = [
     url: "https://www.ucl.ac.uk/risk-disaster-reduction/",
   },
   {
-    org: "China University of Geosciences, Wuhan",
-    desc: "Bachelor of Management Science in Emergency Management · Grade: 90.31/100 · Rank: 1/28",
+    org: "China University of Geosciences",
+    desc: "Bachelor of Management Science in Emergency Management · Grade: 90.31/100",
     role: "Wuhan, China",
     date: "Sep 2021 - Jun 2025",
     url: "https://en.cug.edu.cn/",
@@ -87,12 +79,11 @@ export const education = [
 ];
 
 // These publication examples are retained from the original template.
-export const publications = [
+export const manuscripts = [
   {
     title:
-      "Simulating Thin Markets: Agent-Based Evidence on Matching and Price " +
-      "Formation",
-    authors: "<strong>Jane Doe</strong> and John Roe",
+      "Emergency Medical Service (EMS) Accessibility for Vulnerable Schools Under Urban Pluvial Flooding Scenarios in a Megacity: A Case Study of Wuhan, Central China",
+    authors: "<strong>Rongheng Qi</strong> and John Roe",
     venue: "<em>Journal of Example Economics</em>, 14(2), 331-368",
     abstract:
       "Thin markets are common and poorly understood. This template example " +
@@ -121,23 +112,11 @@ export const publications = [
   },
 ];
 
-// This working-paper example is retained from the original template.
-export const workingPapers = [
-  {
-    title: "Do Referral Bonuses Crowd Out Referral Quality?",
-    authors: "<strong>Jane Doe</strong>",
-    meta: "Revise and resubmit, Journal of Example Economics",
-    abstract:
-      "This is template content showing the layout of a working paper and its status.",
-    links: [{ label: "Draft", href: "https://example.com/papers/referral.pdf" }],
-  },
-];
-
 export const patents = [
   {
     org: "Multifunctional Outdoor Tent",
     desc: "China Utility Model Patent, CN 221990046U",
-    role: "Xie, Z., Xu, J., & Qi, R.",
+    role: "Xie, Z., Xu, J., & <strong>Qi, R.</strong>",
     date: "2024",
     links: [
       {
@@ -149,7 +128,7 @@ export const patents = [
   {
     org: "Anti-Toppling Base and Road Warning Post",
     desc: "China Utility Model Patent, CN 221919100U",
-    role: "Xu, J., Xie, Z., & Qi, R.",
+    role: "Xu, J., Xie, Z., & <strong>Qi, R.</strong>",
     date: "2024",
     links: [
       {
@@ -232,29 +211,24 @@ export const projects = [
 // These award examples are retained from the original template.
 export const awards = [
   {
-    org: "Example Foundation Doctoral Fellowship",
-    role: "Three-year fellowship for research on market design",
-    date: "2025",
+    org: "Best Master Thesis Poster",
+    date: "2026",
   },
   {
-    org: "Best Student Paper, EXAMPLE 2025",
-    role: "For Measuring Policy at Scale",
-    date: "2025",
-  },
-];
-
-// These teaching examples are retained from the original template.
-export const teaching = [
-  {
-    org: "ECON 301: Intermediate Microeconomics",
-    desc: "Ran three weekly sections of 25 students; wrote the problem sets on mechanism design.",
-    role: "Graduate Student Instructor, Northfield University",
-    date: "Fall 2025",
+    org: "Excellent student Cadre of China University of Geosciences",
+    date: "2024",
   },
   {
-    org: "ECON 140: Econometrics",
-    role: "Teaching Assistant, Northfield University",
-    date: "Spring 2025",
+    org: "Provincial Excellent Team of Summer Social Practice Activities",
+    date: "2024",
+  },
+  {
+    org: "Finalist of 2023 International Mathematics Molding Contest for Higher Education",
+    date: "2023",
+  },
+  {
+    org: "First Prize of Youth Volunteer Service Project Competition of China University of Geosciences"
+    date: "2023",
   },
 ];
 
