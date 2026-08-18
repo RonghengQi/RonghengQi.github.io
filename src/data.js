@@ -54,9 +54,8 @@ export const news = [
            at the 16th UCL RDR Annual Academic Conference.`,
   },
   {
-    date: "Nov 2025",
-    text: `Presented <strong>Simulating Thin Markets</strong> at the Example
-           Workshop on Computational Economics.`,
+    date: "Dec 2025",
+    text: `Submitted a research manuscript for peer review.`,
   },
   {
     date: "Sep 2025",
