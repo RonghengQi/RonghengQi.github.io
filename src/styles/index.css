@@ -52,6 +52,13 @@
   color-scheme: dark;
 }
 
+/* Both languages are server-rendered. The saved preference is applied to the
+   root before first paint, and these selectors reveal only that language. */
+:root[data-lang="en"] [data-lang-content="zh"],
+:root[data-lang="zh"] [data-lang-content="en"] {
+  display: none !important;
+}
+
 *,
 *::before,
 *::after {
@@ -125,6 +132,17 @@ a:hover {
      name a little more weight while staying inside the Latin line box. */
   font-size: 0.86em;
   letter-spacing: 0; /* CJK glyphs do not want the Latin negative tracking */
+  font-weight: 400;
+  color: color-mix(in srgb, var(--color-text) 55%, transparent);
+}
+.site-header .name-zh {
+  font-family: var(--font-cjk);
+}
+.site-header .name-en-secondary {
+  margin-left: 0.3em;
+  font-family: var(--font-heading);
+  font-size: 0.86em;
+  letter-spacing: -0.015em;
   font-weight: 400;
   color: color-mix(in srgb, var(--color-text) 55%, transparent);
 }
@@ -202,7 +220,8 @@ aside {
 
 /* Light/dark switch: styled as one more item in the link list rather than as
    a button, so it does not compete with the content. */
-.theme-toggle {
+.theme-toggle,
+.language-toggle {
   display: inline-flex;
   align-items: center;
   gap: 6px;
@@ -215,14 +234,17 @@ aside {
   color: var(--color-link);
   cursor: pointer;
 }
-.theme-toggle:hover {
+.theme-toggle:hover,
+.language-toggle:hover {
   color: var(--color-accent);
   text-decoration: underline;
 }
-.theme-toggle svg {
+.theme-toggle svg,
+.language-toggle svg {
   flex: none;
 }
-.theme-toggle > span {
+.theme-toggle > span,
+.language-toggle > span {
   display: inline-flex;
   align-items: center;
   gap: 6px;
@@ -234,6 +256,15 @@ aside {
   display: none;
 }
 :root[data-theme="dark"] .theme-toggle .when-dark {
+  display: inline-flex;
+}
+
+/* Like the theme switch, the language switch names the destination. */
+.language-toggle .when-chinese,
+:root[data-lang="zh"] .language-toggle .when-english {
+  display: none;
+}
+:root[data-lang="zh"] .language-toggle .when-chinese {
   display: inline-flex;
 }
 

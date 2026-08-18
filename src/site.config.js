@@ -29,7 +29,7 @@ export const site = {
   // ── Language ────────────────────────────────────────────────────────────
   lang: "en", // <html lang>
   locale: "en_US", // og:locale
-  localeAlternate: "", // e.g. "zh_CN" if the page also carries Chinese text
+  localeAlternate: "zh_CN", // alternate language available on the page
 
   // ── SEO and social cards ────────────────────────────────────────────────
   // One or two sentences for search results. Say who you are and what you

@@ -1,0 +1,17 @@
+---
+const { en = "", zh = en, html = false } = Astro.props;
+---
+
+{
+  html ? (
+    <>
+      <span lang="en" data-lang-content="en" set:html={en} />
+      <span lang="zh-CN" data-lang-content="zh" set:html={zh} />
+    </>
+  ) : (
+    <>
+      <span lang="en" data-lang-content="en">{en}</span>
+      <span lang="zh-CN" data-lang-content="zh">{zh}</span>
+    </>
+  )
+}

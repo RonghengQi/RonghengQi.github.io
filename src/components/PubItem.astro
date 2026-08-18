@@ -6,6 +6,8 @@
 // Both panels are in the HTML from the start (with `hidden`) and the script
 // only toggles them, so crawlers that do not run JavaScript still read the
 // abstract — which is most of what makes a paper findable.
+import LocalizedText from "./LocalizedText.astro";
+
 const {
   title,
   authors,
@@ -15,23 +17,54 @@ const {
   abstract,
   bibtex,
   links = [],
+  translation = {},
 } = Astro.props;
 ---
 
 <div class="pub">
   <p class="pub-title">
-    <strong>{title}</strong>
+    <strong><LocalizedText en={title} zh={translation.title} /></strong>
   </p>
   {
     authors && (
       <p class="pub-meta muted">
-        <span set:html={authors} />
-        {note && <span class="pub-note" set:html={note} />}
+        <LocalizedText
+          en={authors}
+          zh={translation.authors}
+          html={true}
+        />
+        {
+          note && (
+            <span class="pub-note">
+              <LocalizedText
+                en={note}
+                zh={translation.note}
+                html={true}
+              />
+            </span>
+          )
+        }
       </p>
     )
   }
-  {venue && <p class="pub-venue" set:html={venue} />}
-  {meta && <p class="pub-meta muted">{meta}</p>}
+  {
+    venue && (
+      <p class="pub-venue">
+        <LocalizedText
+          en={venue}
+          zh={translation.venue}
+          html={true}
+        />
+      </p>
+    )
+  }
+  {
+    meta && (
+      <p class="pub-meta muted">
+        <LocalizedText en={meta} zh={translation.meta} />
+      </p>
+    )
+  }
 
   {
     (abstract || bibtex || links.length > 0) && (

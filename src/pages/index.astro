@@ -6,7 +6,9 @@ import EntryList from "../components/EntryList.astro";
 import NewsList from "../components/NewsList.astro";
 import PubItem from "../components/PubItem.astro";
 import DemoNotice from "../components/DemoNotice.astro";
+import LocalizedText from "../components/LocalizedText.astro";
 import { site, absoluteUrl } from "../site.config.js";
+import { zh } from "../i18n.js";
 import {
   profile,
   about,
@@ -73,8 +75,14 @@ const jsonLd = {
       lines up with the content below. */}
   <header class="site-header">
     <h1>
-      {profile.nameEn}
-      {profile.nameCn && <span class="cn">{profile.nameCn}</span>}
+      <span lang="en" data-lang-content="en">
+        {profile.nameEn}
+        {profile.nameCn && <span class="cn">{profile.nameCn}</span>}
+      </span>
+      <span class="name-zh" lang="zh-CN" data-lang-content="zh">
+        {profile.nameCn}
+        <span class="name-en-secondary" lang="en">{profile.nameEn}</span>
+      </span>
     </h1>
   </header>
 
@@ -86,10 +94,12 @@ const jsonLd = {
     <main>
       {
         about.length > 0 && (
-          <Section id="about" title="About Me">
+          <Section id="about" title="About Me" titleZh={zh.sections.about}>
             <div class="prose">
-              {about.map((para) => (
-                <p set:html={para} />
+              {about.map((para, i) => (
+                <p>
+                  <LocalizedText en={para} zh={zh.about[i]} html={true} />
+                </p>
               ))}
             </div>
           </Section>
@@ -98,26 +108,34 @@ const jsonLd = {
 
       {
         news.length > 0 && (
-          <Section id="news" title="News">
-            <NewsList items={news} />
+          <Section id="news" title="News" titleZh={zh.sections.news}>
+            <NewsList items={news} translations={zh.news} />
           </Section>
         )
       }
 
       {
         education.length > 0 && (
-          <Section id="education" title="Education">
-            <EntryList items={education} />
+          <Section
+            id="education"
+            title="Education"
+            titleZh={zh.sections.education}
+          >
+            <EntryList items={education} translations={zh.education} />
           </Section>
         )
       }
 
       {
         publications.length > 0 && (
-          <Section id="publications" title="Manuscripts">
+          <Section
+            id="publications"
+            title="Manuscripts"
+            titleZh={zh.sections.manuscripts}
+          >
             <div class="pubs">
-              {publications.map((p) => (
-                <PubItem {...p} />
+              {publications.map((p, i) => (
+                <PubItem {...p} translation={zh.manuscripts[i]} />
               ))}
             </div>
           </Section>
@@ -126,18 +144,22 @@ const jsonLd = {
 
       {
         patents.length > 0 && (
-          <Section id="patents" title="Patents">
-            <EntryList items={patents} />
+          <Section id="patents" title="Patents" titleZh={zh.sections.patents}>
+            <EntryList items={patents} translations={zh.patents} />
           </Section>
         )
       }
 
       {
         workingPapers.length > 0 && (
-          <Section id="working-papers" title="Working Papers">
+          <Section
+            id="working-papers"
+            title="Working Papers"
+            titleZh={zh.sections.workingPapers}
+          >
             <div class="pubs">
-              {workingPapers.map((p) => (
-                <PubItem {...p} />
+              {workingPapers.map((p, i) => (
+                <PubItem {...p} translation={zh.workingPapers?.[i]} />
               ))}
             </div>
           </Section>
@@ -146,53 +168,73 @@ const jsonLd = {
 
       {
         experience.length > 0 && (
-          <Section id="experience" title="Research Experience">
-            <EntryList items={experience} />
+          <Section
+            id="experience"
+            title="Research Experience"
+            titleZh={zh.sections.experience}
+          >
+            <EntryList items={experience} translations={zh.experience} />
           </Section>
         )
       }
 
       {
         workExperience.length > 0 && (
-          <Section id="work-experience" title="Work Experience">
-            <EntryList items={workExperience} />
+          <Section
+            id="work-experience"
+            title="Work Experience"
+            titleZh={zh.sections.workExperience}
+          >
+            <EntryList
+              items={workExperience}
+              translations={zh.workExperience}
+            />
           </Section>
         )
       }
 
       {
         projects.length > 0 && (
-          <Section id="projects" title="Projects">
-            <EntryList items={projects} />
+          <Section id="projects" title="Projects" titleZh={zh.sections.projects}>
+            <EntryList items={projects} translations={zh.projects} />
           </Section>
         )
       }
 
       {
         awards.length > 0 && (
-          <Section id="awards" title="Awards & Grants">
-            <EntryList items={awards} />
+          <Section
+            id="awards"
+            title="Awards & Grants"
+            titleZh={zh.sections.awards}
+          >
+            <EntryList items={awards} translations={zh.awards} />
           </Section>
         )
       }
 
       {
         teaching.length > 0 && (
-          <Section id="teaching" title="Teaching">
-            <EntryList items={teaching} />
+          <Section id="teaching" title="Teaching" titleZh={zh.sections.teaching}>
+            <EntryList items={teaching} translations={zh.teaching} />
           </Section>
         )
       }
 
       {
         skills.length > 0 && (
-          <Section id="skills" title="Skills">
-            <EntryList items={skills} />
+          <Section id="skills" title="Skills" titleZh={zh.sections.skills}>
+            <EntryList items={skills} translations={zh.skills} />
           </Section>
         )
       }
 
-      <footer>Last updated {lastUpdated}</footer>
+      <footer>
+        <LocalizedText
+          en={`Last updated ${lastUpdated}`}
+          zh={zh.ui.lastUpdated}
+        />
+      </footer>
     </main>
   </div>
 </Base>

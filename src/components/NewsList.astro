@@ -1,15 +1,25 @@
 ---
 // Dated one-line updates. `text` is an HTML snippet so an item can carry a
 // link or a bit of emphasis.
-const { items } = Astro.props;
+import LocalizedText from "./LocalizedText.astro";
+
+const { items, translations = [] } = Astro.props;
 ---
 
 <ul class="news">
   {
-    items.map((n) => (
+    items.map((n, i) => (
       <li>
-        <span class="news-date muted-2">{n.date}</span>
-        <span set:html={n.text} />
+        <span class="news-date muted-2">
+          <LocalizedText en={n.date} zh={translations[i]?.date} />
+        </span>
+        <span>
+          <LocalizedText
+            en={n.text}
+            zh={translations[i]?.text}
+            html={true}
+          />
+        </span>
       </li>
     ))
   }

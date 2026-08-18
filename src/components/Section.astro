@@ -1,9 +1,11 @@
 ---
-const { id, title } = Astro.props;
+import LocalizedText from "./LocalizedText.astro";
+
+const { id, title, titleZh = title } = Astro.props;
 ---
 
 <section id={id}>
-  <h2>{title}</h2>
+  <h2><LocalizedText en={title} zh={titleZh} /></h2>
   <hr />
   <slot />
 </section>

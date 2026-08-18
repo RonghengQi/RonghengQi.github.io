@@ -1,5 +1,6 @@
 ---
 import { Image } from "astro:assets";
+import LocalizedText from "./LocalizedText.astro";
 
 // Shared by Education, Research Experience, Projects, Awards and Teaching:
 // optional logo on the left, name and role in the middle, dates aligned in a
@@ -17,13 +18,13 @@ import { Image } from "astro:assets";
 //   url    makes `org` a link
 //   links  a row of outlined buttons — Code, Website, Docs, Slides, whatever
 //          the entry has — in the same style the publication list uses
-const { items } = Astro.props;
+const { items, translations = [] } = Astro.props;
 const withLogo = items.some((e) => e.logo);
 ---
 
 <div class:list={["entries", withLogo && "has-logo"]}>
   {
-    items.map((e) => (
+    items.map((e, i) => (
       <div class="entry">
         {withLogo && (
           <span class="entry-logo">
@@ -43,35 +44,56 @@ const withLogo = items.some((e) => e.logo);
             <strong>
               {e.url ? (
                 <a href={e.url} target="_blank" rel="noopener noreferrer">
-                  {e.org}
+                  <LocalizedText en={e.org} zh={translations[i]?.org} />
                 </a>
               ) : (
-                e.org
+                <LocalizedText en={e.org} zh={translations[i]?.org} />
               )}
             </strong>
           </p>
           {/* Description first, advisor second: say what the thing is before
               saying who supervised it. */}
-          {e.desc && <p class="entry-desc">{e.desc}</p>}
-          {e.role && <p class="entry-role muted" set:html={e.role} />}
+          {
+            e.desc && (
+              <p class="entry-desc">
+                <LocalizedText en={e.desc} zh={translations[i]?.desc} />
+              </p>
+            )
+          }
+          {
+            e.role && (
+              <p class="entry-role muted">
+                <LocalizedText
+                  en={e.role}
+                  zh={translations[i]?.role}
+                  html={true}
+                />
+              </p>
+            )
+          }
           {/* The same outlined buttons the publication list uses, so a project
               with code and docs reads like a paper with a PDF and a repo. */}
           {e.links?.length > 0 && (
             <div class="entry-actions">
-              {e.links.map((l) => (
+              {e.links.map((l, linkIndex) => (
                 <a
                   class="pill"
                   href={l.href}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  {l.label}
+                  <LocalizedText
+                    en={l.label}
+                    zh={translations[i]?.links?.[linkIndex]}
+                  />
                 </a>
               ))}
             </div>
           )}
         </div>
-        <span class="entry-date muted-2">{e.date}</span>
+        <span class="entry-date muted-2">
+          <LocalizedText en={e.date} zh={translations[i]?.date} />
+        </span>
         {e.image && (
           <a
             class="entry-figure"

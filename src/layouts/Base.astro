@@ -43,7 +43,7 @@ const needsThemeScript = site.theme.default === "system" || site.theme.toggle;
 ---
 
 <!doctype html>
-<html lang={site.lang} data-theme={pinnedTheme}>
+<html lang={site.lang} data-lang="en" data-theme={pinnedTheme}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -107,6 +107,20 @@ const needsThemeScript = site.theme.default === "system" || site.theme.toggle;
         </Fragment>
       )
     }
+
+    {/* Apply the saved language before first paint. Both translations are
+        already in the HTML; CSS reveals the selected one. */}
+    <script is:inline>
+      let savedLanguage = null;
+      try {
+        savedLanguage = localStorage.getItem("language");
+      } catch {
+        /* private mode: fall back to English */
+      }
+      const language = savedLanguage === "zh" ? "zh" : "en";
+      document.documentElement.dataset.lang = language;
+      document.documentElement.lang = language === "zh" ? "zh-CN" : "en";
+    </script>
 
     {/* Runs before first paint so the page never flashes the wrong theme.
         Inline and tiny on purpose — an external file would be a render-

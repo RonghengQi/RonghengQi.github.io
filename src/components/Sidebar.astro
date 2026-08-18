@@ -1,7 +1,10 @@
 ---
 import { Image } from "astro:assets";
 import { profile } from "../data.js";
+import { zh } from "../i18n.js";
 import { site } from "../site.config.js";
+import LanguageToggle from "./LanguageToggle.astro";
+import LocalizedText from "./LocalizedText.astro";
 import ThemeToggle from "./ThemeToggle.astro";
 ---
 
@@ -18,12 +21,14 @@ import ThemeToggle from "./ThemeToggle.astro";
     />
   </div>
   <div>
-    <h2 class="side-name">{profile.nameEn}</h2>
+    <h2 class="side-name">
+      <LocalizedText en={profile.nameEn} zh={profile.nameCn} />
+    </h2>
     <p class="side-role muted">
       {
         profile.role.map((line, i) => (
           <span>
-            {line}
+            <LocalizedText en={line} zh={zh.profile.role[i]} />
             {i < profile.role.length - 1 && <br />}
           </span>
         ))
@@ -31,18 +36,25 @@ import ThemeToggle from "./ThemeToggle.astro";
     </p>
   </div>
   <div class="side-links">
-    {profile.location && <span class="muted">{profile.location}</span>}
     {
-      profile.links.map((l) => (
+      profile.location && (
+        <span class="muted">
+          <LocalizedText en={profile.location} zh={zh.profile.location} />
+        </span>
+      )
+    }
+    {
+      profile.links.map((l, i) => (
         <a
           href={l.href}
           target={l.newTab ? "_blank" : undefined}
           rel={l.newTab ? "noopener noreferrer" : undefined}
         >
-          {l.label}
+          <LocalizedText en={l.label} zh={zh.profile.links[i]} />
         </a>
       ))
     }
+    <LanguageToggle />
     {site.theme.toggle && <ThemeToggle />}
   </div>
 </aside>
