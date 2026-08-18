@@ -46,9 +46,9 @@ export const about = [
 // The following section is retained from the template until real news is supplied.
 export const news = [
   {
-    date: "Jan 2026",
-    text: `Our paper on matching markets was accepted at the
-           <em>Journal of Example Economics</em>.`,
+    date: "Jun 2026",
+    text: `Presented preliminary findings from my MRes thesis
+           at the 16th UCL RDR Annual Academic Conference.`,
   },
   {
     date: "Nov 2025",
@@ -83,32 +83,9 @@ export const manuscripts = [
   {
     title:
       "Emergency Medical Service (EMS) Accessibility for Vulnerable Schools Under Urban Pluvial Flooding Scenarios in a Megacity: A Case Study of Wuhan, Central China",
-    authors: "<strong>Rongheng Qi</strong> and John Roe",
-    venue: "<em>Journal of Example Economics</em>, 14(2), 331-368",
-    abstract:
-      "Thin markets are common and poorly understood. This template example " +
-      "shows how an abstract, BibTeX entry and external links appear.",
-    bibtex: `@article{doe2025simulating,
-  title   = {Simulating Thin Markets: Agent-Based Evidence on Matching and Price Formation},
-  author  = {Doe, Jane and Roe, John},
-  journal = {Journal of Example Economics},
-  year    = {2025}
-}`,
-    links: [
-      { label: "Paper", href: "https://example.com/papers/thin-markets.pdf" },
-      { label: "Code", href: "https://github.com/example" },
-    ],
-  },
-  {
-    title:
-      "Measuring Policy at Scale: A Text-as-Data Pipeline for Government Documents",
     authors:
-      "Alice Smith, <strong>Jane Doe</strong> and Bob Lee (equal contribution)",
-    venue:
-      "<em>Proceedings of the Example Conference on Computational Social Science</em>",
-    links: [
-      { label: "Paper", href: "https://example.com/papers/policy-scale.pdf" },
-    ],
+      "<strong>Rongheng Qi</strong>, Banxiao Ruan, Zeyu Xie, Jingyi Xu, Shixiang Li, and Wei Mei",
+    venue: "<em>International Journal of Health Geographics</em>",
   },
 ];
 
@@ -187,31 +164,10 @@ export const workExperience = [
   },
 ];
 
-// These project examples are retained from the original template.
-export const projects = [
-  {
-    org: "policy-parse",
-    desc: "An open-source toolkit that turns government documents into a structured policy database.",
-    role: "Author and maintainer · 1.2k stars",
-    date: "2024 - Present",
-    links: [
-      { label: "Code", href: "https://github.com/example" },
-      { label: "Docs", href: "https://example.com/docs" },
-    ],
-  },
-  {
-    org: "thinmarket",
-    desc: "A small simulation library for agent-based matching markets.",
-    role: "Author",
-    date: "2024",
-    links: [{ label: "Code", href: "https://github.com/example" }],
-  },
-];
-
 // These award examples are retained from the original template.
 export const awards = [
   {
-    org: "Best Master Thesis Poster",
+    org: "Best Thesis Poster of RDR Master",
     date: "2026",
   },
   {
