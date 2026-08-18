@@ -12,6 +12,8 @@ import { Image } from "astro:assets";
 //   role   your role, advisor, or anything secondary
 //   date   right-hand column; keep the format consistent across sections
 //   logo   imported image, shown at 48px
+//   image  imported display image, shown full-width below the entry
+//   imageAlt meaningful alternative text for the display image
 //   url    makes `org` a link
 //   links  a row of outlined buttons — Code, Website, Docs, Slides, whatever
 //          the entry has — in the same style the publication list uses
@@ -70,6 +72,23 @@ const withLogo = items.some((e) => e.logo);
           )}
         </div>
         <span class="entry-date muted-2">{e.date}</span>
+        {e.image && (
+          <a
+            class="entry-figure"
+            href={e.image.src}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={`Open full-size figure for ${e.org}`}
+          >
+            <Image
+              src={e.image}
+              alt={e.imageAlt || `Research figure for ${e.org}`}
+              widths={[480, 768, 1200]}
+              sizes="(max-width: 760px) calc(100vw - 48px), 760px"
+              loading="lazy"
+            />
+          </a>
+        )}
       </div>
     ))
   }

@@ -1,4 +1,8 @@
 import photo from "./assets/photo.jpg";
+import buildingDamageFigure from "./assets/research/building-damage-xai.png";
+import floodRiskFigure from "./assets/research/building-scale-flood-risk.jpg";
+import urbanFloodEmsFigure from "./assets/research/urban-flood-ems.jpg";
+import yangtzeResilienceFigure from "./assets/research/yangtze-resilience.png";
 
 export const CV_URL = "Rongheng_Qi_CV_Aug2026.pdf";
 
@@ -125,24 +129,35 @@ export const experience = [
   {
     org: "Building-Scale Flood Risk Assessment",
     desc: "Integrating urban flood susceptibility, building exposure and vulnerability with multi-source remote sensing, urban data and deep learning across more than 120,000 buildings.",
+    image: floodRiskFigure,
+    imageAlt: "Building-scale flood risk assessment workflow and outputs",
     role: "Master's Dissertation · Adviser: Prof. Saman Ghaffarian · University College London",
     date: "Apr 2026 - Present",
   },
   {
     org: "Explainable Post-Disaster Building Damage Classification",
     desc: "Adapting DeepLabV3+ with a MobileNetV3 backbone on the xBD dataset and comparing Grad-CAM, HiRes-CAM, Integrated Gradients and Attention-Aware Layer-Wise Relevance Propagation.",
+    image: buildingDamageFigure,
+    imageAlt:
+      "Comparison of explainable AI methods for post-disaster building damage classification",
     role: "Research Assistant · Adviser: Prof. Saman Ghaffarian · University College London",
     date: "Mar 2026 - Present",
   },
   {
     org: "Urban Pluvial Flooding and Emergency Medical Accessibility",
     desc: "Developing a stochastic rainfall and hydrological simulation framework and applying a probabilistically enhanced two-step floating catchment area model to 15-minute school-to-hospital accessibility in Wuhan.",
+    image: urbanFloodEmsFigure,
+    imageAlt:
+      "Urban flooding and emergency medical accessibility assessment framework",
     role: "Bachelor's Dissertation · Adviser: Prof. Banxiao Ruan · China University of Geosciences",
     date: "Jun 2024 - Jun 2025",
   },
   {
     org: "Urban Resilience in the Yangtze River Economic Belt",
     desc: "Evaluating socio-ecological resilience in 110 cities using time-varying entropy weighting, inequality decomposition and spatial autocorrelation analysis.",
+    image: yangtzeResilienceFigure,
+    imageAlt:
+      "Urban resilience groups across the Yangtze River Economic Belt in 2013 and 2022",
     role: "Research Assistant · Advisers: Prof. Banxiao Ruan and Prof. Shixiang Li · China University of Geosciences",
     date: "May 2023 - Jan 2025",
   },
