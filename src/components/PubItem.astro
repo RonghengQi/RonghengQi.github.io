@@ -10,6 +10,7 @@ const {
   title,
   authors,
   venue,
+  note,
   meta,
   abstract,
   bibtex,
@@ -23,6 +24,7 @@ const {
   </p>
   {authors && <p class="pub-meta muted" set:html={authors} />}
   {venue && <p class="pub-venue" set:html={venue} />}
+  {note && <p class="pub-note muted" set:html={note} />}
   {meta && <p class="pub-meta muted">{meta}</p>}
 
   {

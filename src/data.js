@@ -86,8 +86,9 @@ export const manuscripts = [
     title:
       "Emergency Medical Service (EMS) Accessibility for Vulnerable Schools Under Urban Pluvial Flooding Scenarios in a Megacity: A Case Study of Wuhan, Central China",
     authors:
-      "<strong>Rongheng Qi</strong>, Banxiao Ruan, Zeyu Xie, Jingyi Xu, Shixiang Li, and Wei Mei",
+      "<strong>Rongheng Qi</strong>, Banxiao Ruan<sup>*</sup>, Zeyu Xie, Jingyi Xu, Shixiang Li, and Wei Mei",
     venue: "<em>International Journal of Health Geographics</em>",
+    note: "<sup>*</sup> Corresponding author",
   },
 ];
 

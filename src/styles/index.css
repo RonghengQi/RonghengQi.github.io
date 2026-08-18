@@ -315,6 +315,11 @@ section hr {
   line-height: 1.5;
   margin: 2px 0 0;
 }
+.pub-note {
+  font-size: 13.5px;
+  line-height: 1.5;
+  margin: 3px 0 0;
+}
 
 /* The row of outlined buttons under a paper (Abstract / Paper / BibTeX) or
    under an entry (Code / Website / Docs). One style for both, so a project
