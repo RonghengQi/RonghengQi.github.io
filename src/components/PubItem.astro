@@ -22,9 +22,15 @@ const {
   <p class="pub-title">
     <strong>{title}</strong>
   </p>
-  {authors && <p class="pub-meta muted" set:html={authors} />}
+  {
+    authors && (
+      <p class="pub-meta muted">
+        <span set:html={authors} />
+        {note && <span class="pub-note" set:html={note} />}
+      </p>
+    )
+  }
   {venue && <p class="pub-venue" set:html={venue} />}
-  {note && <p class="pub-note muted" set:html={note} />}
   {meta && <p class="pub-meta muted">{meta}</p>}
 
   {

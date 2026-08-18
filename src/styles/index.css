@@ -316,9 +316,9 @@ section hr {
   margin: 2px 0 0;
 }
 .pub-note {
+  display: inline;
   font-size: 13.5px;
-  line-height: 1.5;
-  margin: 3px 0 0;
+  margin-left: 0.65em;
 }
 
 /* The row of outlined buttons under a paper (Abstract / Paper / BibTeX) or
