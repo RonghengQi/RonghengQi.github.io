@@ -89,6 +89,11 @@ export const manuscripts = [
   },
 ];
 
+// Keep the page renderer compatible with the manuscript section above while
+// leaving intentionally removed template sections empty.
+export const publications = manuscripts;
+export const workingPapers = [];
+
 export const patents = [
   {
     org: "Multifunctional Outdoor Tent",
@@ -164,6 +169,8 @@ export const workExperience = [
   },
 ];
 
+export const projects = [];
+
 // These award examples are retained from the original template.
 export const awards = [
   {
@@ -183,10 +190,12 @@ export const awards = [
     date: "2023",
   },
   {
-    org: "First Prize of Youth Volunteer Service Project Competition of China University of Geosciences"
+    org: "First Prize of Youth Volunteer Service Project Competition of China University of Geosciences",
     date: "2023",
   },
 ];
+
+export const teaching = [];
 
 export const skills = [
   {
