@@ -9,7 +9,7 @@ import { Image } from "astro:assets";
 // Every field except `org` is optional:
 //   org    institution, project or course name (bold)
 //   desc   one or two sentences on what it is
-//   role   your role, advisor, or anything secondary
+//   role   your role, advisor, or anything secondary; inline HTML is allowed
 //   date   right-hand column; keep the format consistent across sections
 //   logo   imported image, shown at 48px
 //   image  imported display image, shown full-width below the entry
@@ -53,7 +53,7 @@ const withLogo = items.some((e) => e.logo);
           {/* Description first, advisor second: say what the thing is before
               saying who supervised it. */}
           {e.desc && <p class="entry-desc">{e.desc}</p>}
-          {e.role && <p class="entry-role muted">{e.role}</p>}
+          {e.role && <p class="entry-role muted" set:html={e.role} />}
           {/* The same outlined buttons the publication list uses, so a project
               with code and docs reads like a paper with a PDF and a repo. */}
           {e.links?.length > 0 && (
