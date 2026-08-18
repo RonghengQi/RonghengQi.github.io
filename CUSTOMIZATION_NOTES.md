@@ -55,7 +55,7 @@ npm run build
 
 The site is configured for:
 
-`https://ronghengqi.github.io/academic-homepage/`
+`https://ronghengqi.github.io/`
 
 In GitHub, choose **Settings > Pages > Source > GitHub Actions**, then push the
 project to the `main` branch. If the repository name or domain changes, update

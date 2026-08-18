@@ -9,9 +9,9 @@ export const site = {
   // ── First thing to change ───────────────────────────────────────────────
   // A bar at the top of the page saying the content is placeholder. It is on
   // for the template's own demo; turn it off once the page is about you.
-  demoNotice: true,
+  demoNotice: false,
   // Where the template lives, linked from that bar.
-  repo: "https://github.com/RonghengQi/academic-homepage",
+  repo: "https://github.com/RonghengQi/RonghengQi.github.io",
 
   // ── Deployment ──────────────────────────────────────────────────────────
   // Absolute URL of the deployed site, no trailing slash. Used for canonical
@@ -24,7 +24,7 @@ export const site = {
   // Sub-path the site is served from. Leave "/" for a custom domain or a
   // <your-name>.github.io repository. For a project repository published at
   // <your-name>.github.io/<repo>/, set this to "/<repo>/".
-  base: "/academic-homepage/",
+  base: "/",
 
   // ── Language ────────────────────────────────────────────────────────────
   lang: "en", // <html lang>
