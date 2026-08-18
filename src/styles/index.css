@@ -28,15 +28,14 @@
   --color-divider: color-mix(in srgb, var(--color-text) 16%, transparent);
   --color-rule: color-mix(in srgb, var(--color-text) 25%, transparent);
 
-  /* Source Serif 4, downloaded and self-hosted by Astro at build time.
-     The variable name is set in astro.config.mjs. */
-  --font-heading: var(--font-serif), Georgia, serif;
-  --font-body: var(--font-serif), Georgia, serif;
+  /* The template's original Source Serif 4, bundled and self-hosted. */
+  --font-heading: "Source Serif 4 Variable", "Source Serif 4", Georgia, serif;
+  --font-body: "Source Serif 4 Variable", "Source Serif 4", Georgia, serif;
 
   /* Font for a name in a non-Latin script, used only in the masthead.
      Default is a Chinese serif that pairs with Source Serif 4. See the README
      if you need the matching webfont subset. */
-  --font-cjk: "CJK Name", "Songti SC", "SimSun", serif;
+  --font-cjk: "CJK Name", "Songti SC", SimSun, serif;
 
   /* The three measurements the whole layout is built from: content width,
      outer margin, sidebar width. The masthead and the body share the first

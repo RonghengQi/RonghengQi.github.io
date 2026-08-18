@@ -1,9 +1,10 @@
 ---
 // The <head> for every page: SEO tags, social cards, structured data, fonts
 // and the theme bootstrap. Pages pass in a title and their own content.
-import { Font, getImage } from "astro:assets";
+import { getImage } from "astro:assets";
 import { site, absoluteUrl } from "../site.config.js";
 import { profile } from "../data.js";
+import "@fontsource-variable/source-serif-4";
 import "../styles/index.css";
 
 const {
@@ -89,7 +90,6 @@ const needsThemeScript = site.theme.default === "system" || site.theme.toggle;
     {/* Fonts are self-hosted — the page makes no request to Google at runtime.
         Astro downloads and subsets the Latin face at build time; the CJK name,
         if there is one, uses the hand-made subset in public/fonts/. */}
-    <Font cssVariable="--font-serif" preload />
     {
       profile.nameCn && (
         <Fragment>

@@ -1,76 +1,50 @@
-// Everything on the page lives here. Editing this one file covers almost every
-// content change you will ever make — the components in src/components/ only
-// lay it out.
-//
-// Fields that need an inline link, bold or italics (about, news, authors,
-// venue) are HTML snippets; they are rendered with Astro's `set:html`.
-//
-// Every list below is optional: empty the array and its section disappears
-// from the page. Reordering sections means moving the blocks in
-// src/pages/index.astro.
-//
-// The content shipped here is placeholder data for a fictional researcher.
-// Replace it with your own.
-
-// Images are imported from src/assets/ rather than written as public/ paths,
-// so Astro can compress them, convert to WebP and emit a srcset at build time.
-// Swap the files in place and the build takes care of the rest.
 import photo from "./assets/photo.jpg";
-import northfield from "./assets/logos/northfield.png";
-import lakeside from "./assets/logos/lakeside.png";
-import riverbend from "./assets/logos/riverbend.png";
 
-// Path to your CV inside public/. Putting the year and month in the filename
-// means anyone who saves it can tell which version they have. To update:
-// drop the new PDF into public/ under a new name, then change this line —
-// the sidebar link and the About text both read this constant.
-export const CV_URL = "Jane_Doe_CV_Jan2026.pdf";
+export const CV_URL = "Rongheng_Qi_CV_Aug2026.pdf";
 
 export const profile = {
-  nameEn: "Jane Doe",
-  // Optional second name shown next to the English one in the masthead, meant
-  // for a name in a non-Latin script (Chinese, Japanese, Korean, Greek,
-  // Cyrillic…). Leave it empty and nothing renders.
-  //
-  // For Chinese specifically the template ships a font-subsetting script so
-  // the characters load in the right serif rather than falling back to the
-  // system font — see the "Chinese (or other CJK) name" section of the README.
-  nameCn: "",
-  // Each string is one line, so you control where the role wraps.
-  role: ["Ph.D. Student in Economics,", "Northfield University"],
-  location: "Northfield, Example State",
-  photo, // src/assets/photo.jpg; a grey placeholder shows if it fails to load
+  nameEn: "Rongheng Qi",
+  nameCn: "齐荣衡",
+  role: [
+    "MRes Student in Risk and Disaster Reduction,",
+    "University College London",
+  ],
+  location: "London, United Kingdom",
+  photo,
   links: [
-    { label: "Email", href: "mailto:jane.doe@example.edu" },
-    { label: "GitHub", href: "https://github.com/example" },
+    { label: "Email", href: "mailto:rongheng.qi.25@ucl.ac.uk" },
+    {
+      label: "LinkedIn",
+      href: "https://www.linkedin.com/in/rongheng-qi-54970a399/",
+      newTab: true,
+    },
+    {
+      label: "GitHub",
+      href: "https://github.com/RonghengQi",
+      newTab: true,
+    },
     { label: "Google Scholar", href: "https://scholar.google.com/" },
-    // newTab: true opens the PDF in the browser's viewer instead of
-    // navigating away from the page.
     { label: "CV (PDF)", href: CV_URL, newTab: true },
   ],
 };
 
 export const about = [
-  `I am a Ph.D. student in Economics at
-   <a href="https://example.edu/">Northfield University</a>, advised by
-   Prof. <a href="https://example.edu/faculty/a-smith">Alice Smith</a>. Before
-   that I read Economics at Riverbend State University and spent a term as a
-   visiting student at the Lakeside Institute of Technology.`,
-  `I study how the design of a market shapes what the people inside it do. My
-   current work combines field data with large-scale simulation: I build
-   agent-based models of matching markets, then test their predictions against
-   administrative records from online labour platforms. A second line of work
-   uses text-as-data methods to measure policy from government documents at a
-   scale hand-coding cannot reach.`,
-  `I am always glad to hear from people working on adjacent questions — market
-   design, computational social science, or text as data. You can reach me by
-   <a href="mailto:jane.doe@example.edu">email</a>, or read
+  `I am an MRes student in Risk and Disaster Reduction at
+   <a href="https://www.ucl.ac.uk/risk-disaster-reduction/">University College London</a>.
+   Before joining UCL, I completed a Bachelor of Management Science in Emergency
+   Management at the China University of Geosciences, Wuhan, graduating first
+   in my cohort.`,
+  `My research focuses on disaster risk reduction, emergency response,
+   geospatial analysis and GeoAI. I combine remote sensing, GIS, machine
+   learning and explainable AI to study urban flooding, post-disaster building
+   damage, emergency medical accessibility and urban resilience.`,
+  `I am interested in developing interpretable, building-scale evidence that
+   supports equitable risk management and emergency planning. You can reach me by
+   <a href="mailto:rongheng.qi.25@ucl.ac.uk">email</a>, or read
    <a href="${CV_URL}" target="_blank" rel="noopener noreferrer">my CV here</a>.`,
 ];
 
-// Short, dated updates — new papers, talks, moves. Keep the newest first and
-// the list short; three to six entries reads best. Empty the array to hide
-// the section entirely.
+// The following section is retained from the template until real news is supplied.
 export const news = [
   {
     date: "Jan 2026",
@@ -95,160 +69,167 @@ export const news = [
   },
 ];
 
-// `logo` and `url` are optional. `url` is the institution's homepage; it also
-// feeds the structured-data block that tells search engines where you studied.
 export const education = [
   {
-    org: "Northfield University",
-    role: "Ph.D. in Economics",
-    date: "Sep 2023 – Jun 2028 (expected)",
-    logo: northfield,
-    url: "https://example.edu/",
+    org: "University College London",
+    desc: "Master of Research in Risk and Disaster Reduction · Grade: 70.70/100 (Distinction)",
+    role: "London, United Kingdom",
+    date: "Sep 2025 - Dec 2026 (expected)",
+    url: "https://www.ucl.ac.uk/risk-disaster-reduction/",
   },
   {
-    org: "Lakeside Institute of Technology",
-    role: "Visiting Student, Department of Economics",
-    date: "Jan 2023 – Jun 2023",
-    logo: lakeside,
-    url: "https://example.org/",
-  },
-  {
-    org: "Riverbend State University",
-    role: "B.A. in Economics, minor in Statistics",
-    date: "Sep 2019 – Jun 2023",
-    logo: riverbend,
-    url: "https://example.net/",
+    org: "China University of Geosciences, Wuhan",
+    desc: "Bachelor of Management Science in Emergency Management · Grade: 90.31/100 · Rank: 1/28",
+    role: "Wuhan, China",
+    date: "Sep 2021 - Jun 2025",
+    url: "https://en.cug.edu.cn/",
   },
 ];
 
-// Published or accepted work. `abstract` and `bibtex` expand in place;
-// everything in `links` becomes a button that opens in a new tab.
-// All fields except `title` are optional.
+// These publication examples are retained from the original template.
 export const publications = [
   {
     title:
       "Simulating Thin Markets: Agent-Based Evidence on Matching and Price " +
       "Formation",
     authors: "<strong>Jane Doe</strong> and John Roe",
-    venue: "<em>Journal of Example Economics</em>, 14(2), 331–368",
+    venue: "<em>Journal of Example Economics</em>, 14(2), 331-368",
     abstract:
-      "Thin markets — those with few buyers, few sellers, or both — are common " +
-      "and poorly understood, because the asymptotic results that organise " +
-      "our thinking about large markets do not apply. We build an agent-based " +
-      "model in which traders learn from their own transaction history rather " +
-      "than from a commonly known equilibrium, and study how prices form as " +
-      "the market thins. Three findings stand out. First, price dispersion " +
-      "grows faster than the square root of market size, so thin markets are " +
-      "noisier than sampling variation alone would predict. Second, a small " +
-      "amount of centralised information — publishing the median transaction " +
-      "price once per period — recovers most of the efficiency lost to " +
-      "thinness. Third, the gains are unevenly distributed: they accrue " +
-      "almost entirely to inexperienced traders. We validate the model " +
-      "against transaction records from an online labour platform and find " +
-      "the predicted dispersion pattern in the data.",
+      "Thin markets are common and poorly understood. This template example " +
+      "shows how an abstract, BibTeX entry and external links appear.",
     bibtex: `@article{doe2025simulating,
   title   = {Simulating Thin Markets: Agent-Based Evidence on Matching and Price Formation},
   author  = {Doe, Jane and Roe, John},
   journal = {Journal of Example Economics},
-  volume  = {14},
-  number  = {2},
-  pages   = {331--368},
-  year    = {2025},
-  doi     = {10.5555/example.2025.331}
+  year    = {2025}
 }`,
     links: [
       { label: "Paper", href: "https://example.com/papers/thin-markets.pdf" },
       { label: "Code", href: "https://github.com/example" },
-      { label: "Data", href: "https://example.com/data/thin-markets" },
     ],
   },
   {
     title:
-      "Measuring Policy at Scale: A Text-as-Data Pipeline for Government " +
-      "Documents",
+      "Measuring Policy at Scale: A Text-as-Data Pipeline for Government Documents",
     authors:
       "Alice Smith, <strong>Jane Doe</strong> and Bob Lee (equal contribution)",
     venue:
-      "<em>Proceedings of the Example Conference on Computational Social " +
-      "Science (EXAMPLE 2025)</em>",
+      "<em>Proceedings of the Example Conference on Computational Social Science</em>",
     links: [
       { label: "Paper", href: "https://example.com/papers/policy-scale.pdf" },
     ],
   },
 ];
 
-// Work in circulation but not yet published. Same fields as `publications`;
-// `meta` adds a status line, which is where "R&R at …" or "under review"
-// belongs. Empty the array and the section disappears.
+// This working-paper example is retained from the original template.
 export const workingPapers = [
   {
     title: "Do Referral Bonuses Crowd Out Referral Quality?",
     authors: "<strong>Jane Doe</strong>",
     meta: "Revise and resubmit, Journal of Example Economics",
     abstract:
-      "Firms increasingly pay employees to refer candidates. Using the " +
-      "staggered rollout of a referral bonus across 240 offices, I show that " +
-      "the volume of referrals rises by 38% while the share that survive the " +
-      "first screening round falls by 11 percentage points. Total quality-" +
-      "adjusted referrals are unchanged. The pattern is concentrated among " +
-      "employees with the weakest professional networks, consistent with a " +
-      "model in which the bonus draws in referrals from the tail of the " +
-      "referrer's acquaintance distribution rather than eliciting effort.",
+      "This is template content showing the layout of a working paper and its status.",
     links: [{ label: "Draft", href: "https://example.com/papers/referral.pdf" }],
   },
 ];
 
-// Ongoing research that does not yet have a circulating draft. Once a project
-// produces one, move it up to `workingPapers`.
-export const experience = [
+export const patents = [
   {
-    org: "Market Design for Online Labour Platforms",
-    desc: "Building a matching model that accounts for the search costs both sides actually face, and testing it against two years of platform transaction data.",
-    role: "With Prof. Alice Smith (Northfield University)",
-    date: "Sep 2024 – Present",
+    org: "Multifunctional Outdoor Tent",
+    desc: "China Utility Model Patent, CN 221990046U",
+    role: "Xie, Z., Xu, J., & Qi, R.",
+    date: "2024",
+    links: [
+      {
+        label: "Patent",
+        href: "https://patents.google.com/patent/CN221990046U/en",
+      },
+    ],
   },
   {
-    org: "Policy Text at Scale",
-    desc: "A two-stage pipeline over roughly 400,000 municipal documents, measuring which policy instruments are used, at what intensity, and for whom.",
-    role: "Project lead, advised by Dr. Carol Nguyen (Example Institute)",
-    date: "Jan 2024 – Present",
-  },
-  {
-    org: "Public Service Provision and Regional Inequality",
-    desc: "A city-year panel of 280 cities asking whether unequal access to public services widens the income gap between urban and rural households.",
-    role: "Research assistant to Prof. David Park (Riverbend State University)",
-    date: "Jun 2023 – Dec 2023",
+    org: "Anti-Toppling Base and Road Warning Post",
+    desc: "China Utility Model Patent, CN 221919100U",
+    role: "Xu, J., Xie, Z., & Qi, R.",
+    date: "2024",
+    links: [
+      {
+        label: "Patent",
+        href: "https://patents.google.com/patent/CN221919100U/en",
+      },
+    ],
   },
 ];
 
-// Software, tools, datasets — anything you built that stands on its own.
+export const experience = [
+  {
+    org: "Building-Scale Flood Risk Assessment",
+    desc: "Integrating urban flood susceptibility, building exposure and vulnerability with multi-source remote sensing, urban data and deep learning across more than 120,000 buildings.",
+    role: "Master's Dissertation · Adviser: Prof. Saman Ghaffarian · University College London",
+    date: "Apr 2026 - Present",
+  },
+  {
+    org: "Explainable Post-Disaster Building Damage Classification",
+    desc: "Adapting DeepLabV3+ with a MobileNetV3 backbone on the xBD dataset and comparing Grad-CAM, HiRes-CAM, Integrated Gradients and Attention-Aware Layer-Wise Relevance Propagation.",
+    role: "Research Assistant · Adviser: Prof. Saman Ghaffarian · University College London",
+    date: "Mar 2026 - Present",
+  },
+  {
+    org: "Urban Pluvial Flooding and Emergency Medical Accessibility",
+    desc: "Developing a stochastic rainfall and hydrological simulation framework and applying a probabilistically enhanced two-step floating catchment area model to 15-minute school-to-hospital accessibility in Wuhan.",
+    role: "Bachelor's Dissertation · Adviser: Prof. Banxiao Ruan · China University of Geosciences",
+    date: "Jun 2024 - Jun 2025",
+  },
+  {
+    org: "Urban Resilience in the Yangtze River Economic Belt",
+    desc: "Evaluating socio-ecological resilience in 110 cities using time-varying entropy weighting, inequality decomposition and spatial autocorrelation analysis.",
+    role: "Research Assistant · Advisers: Prof. Banxiao Ruan and Prof. Shixiang Li · China University of Geosciences",
+    date: "May 2023 - Jan 2025",
+  },
+  {
+    org: "Post-Pandemic Work Resumption Policy Analysis",
+    desc: "Structuring and classifying more than 100,000 words of economic, transport and public-health policy documents from seven major Chinese cities.",
+    role: "Research Assistant · Advisers: Prof. Pengjun Zhao and Prof. Qiyang Liu · Peking University Shenzhen Graduate School",
+    date: "Jul 2022 - Sep 2022",
+  },
+];
+
+export const workExperience = [
+  {
+    org: "PIESAT Information Technology Co., Ltd",
+    desc: "Conducted multi-hazard risk assessments for four Hubei cities, produced more than 20 standardised zoning maps, and contributed to eight official disaster-governance deliverables.",
+    role: "Disaster Analyst Intern · Emergency Management Department · Wuhan, China",
+    date: "Dec 2024 - Feb 2025",
+  },
+  {
+    org: "Natural Resources and Planning Bureau of Badong County",
+    desc: "Supported active-landslide field investigations using UAV and GPS data, and processed Sentinel-2 and Landsat-8 imagery for vegetation, water and terrain analysis.",
+    role: "Geospatial Analyst Intern · Disaster Prevention Department · Enshi, China",
+    date: "Jul 2023 - Aug 2023",
+  },
+];
+
+// These project examples are retained from the original template.
 export const projects = [
   {
     org: "policy-parse",
-    desc: "An open-source toolkit that turns government documents into a structured policy database, with a fine-tuned classifier for screening and an LLM extraction stage for attributes.",
+    desc: "An open-source toolkit that turns government documents into a structured policy database.",
     role: "Author and maintainer · 1.2k stars",
-    date: "2024 – Present",
-    // Each entry becomes an outlined button, in the order you list them.
-    // Label them for what they are: Code, Website, Docs, Demo, Slides, Data.
+    date: "2024 - Present",
     links: [
       { label: "Code", href: "https://github.com/example" },
       { label: "Docs", href: "https://example.com/docs" },
-      { label: "Website", href: "https://example.com" },
     ],
   },
   {
     org: "thinmarket",
-    desc: "A small simulation library for agent-based matching markets, used for the experiments in the paper above.",
+    desc: "A small simulation library for agent-based matching markets.",
     role: "Author",
     date: "2024",
-    links: [
-      { label: "Code", href: "https://github.com/example" },
-      { label: "Demo", href: "https://example.com/demo" },
-    ],
+    links: [{ label: "Code", href: "https://github.com/example" }],
   },
 ];
 
-// Grants, prizes, fellowships. Empty the array to hide the section.
+// These award examples are retained from the original template.
 export const awards = [
   {
     org: "Example Foundation Doctoral Fellowship",
@@ -257,17 +238,12 @@ export const awards = [
   },
   {
     org: "Best Student Paper, EXAMPLE 2025",
-    role: "For “Measuring Policy at Scale”",
+    role: "For Measuring Policy at Scale",
     date: "2025",
-  },
-  {
-    org: "Riverbend State University Departmental Prize in Economics",
-    role: "Awarded to the top graduating student in the cohort",
-    date: "2023",
   },
 ];
 
-// Courses taught or assisted. Empty the array to hide the section.
+// These teaching examples are retained from the original template.
 export const teaching = [
   {
     org: "ECON 301: Intermediate Microeconomics",
@@ -282,6 +258,15 @@ export const teaching = [
   },
 ];
 
-// Shown in the footer. Worth bumping whenever you edit the page — it tells a
-// visitor whether they are reading something current.
-export const lastUpdated = "January 2026";
+export const skills = [
+  {
+    org: "Geospatial and Data Tools",
+    desc: "Python · ArcGIS Pro · Google Earth Engine · RStudio · SPSS · Overleaf",
+  },
+  {
+    org: "Languages",
+    desc: "Mandarin (native) · English (fluent, IELTS 7.0: L 7.0 / R 7.0 / W 6.5 / S 6.5)",
+  },
+];
+
+export const lastUpdated = "August 2026";

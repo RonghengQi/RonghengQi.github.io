@@ -14,10 +14,13 @@ import {
   education,
   publications,
   workingPapers,
+  patents,
   experience,
+  workExperience,
   projects,
   awards,
   teaching,
+  skills,
   lastUpdated,
 } from "../data.js";
 
@@ -122,6 +125,14 @@ const jsonLd = {
       }
 
       {
+        patents.length > 0 && (
+          <Section id="patents" title="Patents">
+            <EntryList items={patents} />
+          </Section>
+        )
+      }
+
+      {
         workingPapers.length > 0 && (
           <Section id="working-papers" title="Working Papers">
             <div class="pubs">
@@ -137,6 +148,14 @@ const jsonLd = {
         experience.length > 0 && (
           <Section id="experience" title="Research Experience">
             <EntryList items={experience} />
+          </Section>
+        )
+      }
+
+      {
+        workExperience.length > 0 && (
+          <Section id="work-experience" title="Work Experience">
+            <EntryList items={workExperience} />
           </Section>
         )
       }
@@ -161,6 +180,14 @@ const jsonLd = {
         teaching.length > 0 && (
           <Section id="teaching" title="Teaching">
             <EntryList items={teaching} />
+          </Section>
+        )
+      }
+
+      {
+        skills.length > 0 && (
+          <Section id="skills" title="Skills">
+            <EntryList items={skills} />
           </Section>
         )
       }

@@ -1,5 +1,5 @@
 // @ts-check
-import { defineConfig, fontProviders } from "astro/config";
+import { defineConfig } from "astro/config";
 import { site } from "./src/site.config.js";
 
 // A static site: everything is rendered to HTML at build time and the output
@@ -17,25 +17,4 @@ export default defineConfig({
     // Hashed asset filenames, so they can be cached forever
     assets: "assets",
   },
-
-  // The Latin webfont is downloaded, subset and self-hosted by Astro at build
-  // time: no cross-origin handshake with fonts.googleapis.com or
-  // fonts.gstatic.com, and no third-party request blocking the first paint.
-  // Astro also generates a metric-matched local fallback, so text does not
-  // shift when the webfont swaps in.
-  //
-  // To change the typeface, change `name` here — `cssVariable` is what
-  // src/styles/index.css reads, so leave it alone.
-  fonts: [
-    {
-      provider: fontProviders.google(),
-      name: "Source Serif 4",
-      cssVariable: "--font-serif",
-      weights: [400, 600],
-      styles: ["normal", "italic"],
-      subsets: ["latin"],
-      display: "swap",
-      fallbacks: ["Georgia", "serif"],
-    },
-  ],
 });
