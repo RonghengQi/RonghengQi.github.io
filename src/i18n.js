@@ -18,7 +18,7 @@ export const zh = {
     experience: "科研经历",
     workExperience: "工作经历",
     projects: "项目经历",
-    awards: "奖项与资助",
+    awards: "奖项",
     teaching: "教学经历",
     skills: "技能",
   },

@@ -475,6 +475,9 @@ section hr {
   color: var(--color-link);
   text-decoration: underline;
 }
+#awards .entry-org strong {
+  font-weight: 400;
+}
 /* Description sits at full text colour, heavier than the advisor line below
    it: bold title > description > attribution. */
 .entry-desc {
