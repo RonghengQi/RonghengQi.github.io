@@ -34,22 +34,23 @@ export const profile = {
 };
 
 export const about = [
-  `I am currently an <strong>MRes student</strong> in Risk and Disaster Reduction at
+  `I am currently an MRes student in Risk and Disaster Reduction at
    <a href="https://www.ucl.ac.uk/risk-disaster-reduction/">University College London</a>,
    advised by Prof. <a href="https://profiles.ucl.ac.uk/89003-saman-ghaffarian">Saman Ghaffarian</a>
    and Prof. <a href="https://profiles.ucl.ac.uk/90166-mark-pelling/publications">Mark Pelling</a>.
    I previously earned my Bachelor of Management Science in Emergency Management at
-   <a href="https://en.cug.edu.cn/">China University of Geosciences (Wuhan)</a>,
+   <a href="https://en.cug.edu.cn/">China University of Geosciences</a>,
    advised by Prof. <a href="https://grzy.cug.edu.cn/ruanbanxiao/zh_CN/index.htm">Banxiao Ruan</a>
    and Prof. <a href="https://grzy.cug.edu.cn/lishixiang/zh_CN/index.htm">Shixiang Li</a>.`,
   `My research focuses on disaster risk reduction, emergency response,
    geospatial analysis and GeoAI. I combine remote sensing, GIS, machine
    learning and explainable AI to study urban flooding, post-disaster building
    damage, emergency medical accessibility and urban resilience.`,
-  `I am interested in developing interpretable, building-scale evidence that
-   supports equitable risk management and emergency planning. You can reach me by
-   <a href="mailto:rongheng.qi.25@ucl.ac.uk">email</a>, or read
-   <a href="${CV_URL}" target="_blank" rel="noopener noreferrer">my CV here</a>.`,
+  `My research interests centre on applying artificial intelligence, remote sensing
+   and geospatial data to vulnerability and resilience assessment, recovery monitoring
+   and disaster loss modelling. I aim to support strategic disaster risk management by
+   translating complex data and models into actionable information that decision-makers
+   can use during disasters and crises.`,
 ];
 
 export const education = [

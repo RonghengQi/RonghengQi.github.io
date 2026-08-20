@@ -1,5 +1,3 @@
-import { CV_URL } from "./data.js";
-
 // Chinese content is kept separate from the English source data so the two
 // versions can be edited independently without duplicating the page layout.
 export const zh = {
@@ -24,9 +22,9 @@ export const zh = {
   },
 
   about: [
-    `我目前在<a href="https://www.ucl.ac.uk/risk-disaster-reduction/">伦敦大学学院</a>攻读<strong>风险与减灾研究型硕士</strong>，导师为<a href="https://profiles.ucl.ac.uk/89003-saman-ghaffarian">Saman Ghaffarian</a>教授和<a href="https://profiles.ucl.ac.uk/90166-mark-pelling/publications">Mark Pelling</a>教授。我此前在<a href="https://en.cug.edu.cn/">中国地质大学（武汉）</a>获得应急管理专业管理学学士学位，本科导师为<a href="https://grzy.cug.edu.cn/ruanbanxiao/zh_CN/index.htm">阮班晓</a>教授和<a href="https://grzy.cug.edu.cn/lishixiang/zh_CN/index.htm">李世祥</a>教授。`,
+    `我目前在<a href="https://www.ucl.ac.uk/risk-disaster-reduction/">伦敦大学学院</a>攻读风险与减灾研究型硕士，导师为<a href="https://profiles.ucl.ac.uk/89003-saman-ghaffarian">Saman Ghaffarian</a>教授和<a href="https://profiles.ucl.ac.uk/90166-mark-pelling/publications">Mark Pelling</a>教授。我此前在<a href="https://en.cug.edu.cn/">中国地质大学</a>获得应急管理专业管理学学士学位，本科导师为<a href="https://grzy.cug.edu.cn/ruanbanxiao/zh_CN/index.htm">阮班晓</a>教授和<a href="https://grzy.cug.edu.cn/lishixiang/zh_CN/index.htm">李世祥</a>教授。`,
     `我的研究聚焦灾害风险降低、应急响应、地理空间分析与 GeoAI。我结合遥感、GIS、机器学习和可解释人工智能，研究城市洪涝、灾后建筑损毁、紧急医疗服务可达性及城市韧性。`,
-    `我致力于构建可解释的建筑尺度证据，为公平的风险管理与应急规划提供支持。欢迎通过<a href="mailto:rongheng.qi.25@ucl.ac.uk">电子邮件</a>与我联系，或<a href="${CV_URL}" target="_blank" rel="noopener noreferrer">在此查看我的简历</a>。`,
+    `我的研究兴趣在于运用人工智能、遥感技术和地理空间数据开展脆弱性与韧性评估、灾后恢复监测和灾害损失建模。我希望通过将复杂的数据和模型转化为决策者可在灾害与危机情境中使用的实用信息，为战略性灾害风险管理提供支持。`,
   ],
 
   education: [
