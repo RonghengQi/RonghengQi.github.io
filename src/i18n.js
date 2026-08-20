@@ -50,7 +50,8 @@ export const zh = {
         "特大城市内涝情景下脆弱学校的紧急医疗服务可达性：以中国中部武汉市为例",
       authors:
         "<strong>Rongheng Qi</strong>, Banxiao Ruan<sup>*</sup>, Zeyu Xie, Jingyi Xu, Shixiang Li, and Wei Mei",
-      venue: "<em>International Journal of Health Geographics</em>",
+      venue:
+        "投稿至 <em>International Journal of Health Geographics</em> · 第二轮同行评审进行中",
       note: "<sup>*</sup> 通讯作者",
     },
   ],
