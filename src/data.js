@@ -32,10 +32,14 @@ export const profile = {
 };
 
 export const about = [
-  `I am an MRes student in Risk and Disaster Reduction at
-   <a href="https://www.ucl.ac.uk/risk-disaster-reduction/">University College London</a>.
-   Before joining UCL, I completed a Bachelor of Management Science in Emergency
-   Management at <a href="https://en.cug.edu.cn/">China University of Geosciences</a>.`,
+  `I am currently an <strong>MRes student</strong> in Risk and Disaster Reduction at
+   <a href="https://www.ucl.ac.uk/risk-disaster-reduction/">University College London</a>,
+   advised by Prof. <a href="https://profiles.ucl.ac.uk/89003-saman-ghaffarian">Saman Ghaffarian</a>
+   and Prof. <a href="https://profiles.ucl.ac.uk/90166-mark-pelling/publications">Mark Pelling</a>.
+   I previously earned my Bachelor of Management Science in Emergency Management at
+   <a href="https://en.cug.edu.cn/">China University of Geosciences (Wuhan)</a>,
+   advised by Prof. <a href="https://grzy.cug.edu.cn/ruanbanxiao/zh_CN/index.htm">Banxiao Ruan</a>
+   and Prof. <a href="https://grzy.cug.edu.cn/lishixiang/zh_CN/index.htm">Shixiang Li</a>.`,
   `My research focuses on disaster risk reduction, emergency response,
    geospatial analysis and GeoAI. I combine remote sensing, GIS, machine
    learning and explainable AI to study urban flooding, post-disaster building
