@@ -11,7 +11,6 @@ export const zh = {
 
   sections: {
     about: "个人简介",
-    news: "动态",
     education: "教育经历",
     manuscripts: "论文手稿",
     patents: "专利",
@@ -28,21 +27,6 @@ export const zh = {
     `我目前在<a href="https://www.ucl.ac.uk/risk-disaster-reduction/">伦敦大学学院</a>攻读<strong>风险与减灾研究型硕士</strong>，导师为<a href="https://profiles.ucl.ac.uk/89003-saman-ghaffarian">Saman Ghaffarian</a>教授和<a href="https://profiles.ucl.ac.uk/90166-mark-pelling/publications">Mark Pelling</a>教授。我此前在<a href="https://en.cug.edu.cn/">中国地质大学（武汉）</a>获得应急管理专业管理学学士学位，本科导师为<a href="https://grzy.cug.edu.cn/ruanbanxiao/zh_CN/index.htm">阮班晓</a>教授和<a href="https://grzy.cug.edu.cn/lishixiang/zh_CN/index.htm">李世祥</a>教授。`,
     `我的研究聚焦灾害风险降低、应急响应、地理空间分析与 GeoAI。我结合遥感、GIS、机器学习和可解释人工智能，研究城市洪涝、灾后建筑损毁、紧急医疗服务可达性及城市韧性。`,
     `我致力于构建可解释的建筑尺度证据，为公平的风险管理与应急规划提供支持。欢迎通过<a href="mailto:rongheng.qi.25@ucl.ac.uk">电子邮件</a>与我联系，或<a href="${CV_URL}" target="_blank" rel="noopener noreferrer">在此查看我的简历</a>。`,
-  ],
-
-  news: [
-    {
-      date: "2026年6月",
-      text: "在第16届 UCL RDR 年度学术会议上汇报研究型硕士论文的初步成果。",
-    },
-    {
-      date: "2025年12月",
-      text: "向同行评审期刊提交了一篇研究论文。",
-    },
-    {
-      date: "2025年9月",
-      text: "开始在伦敦大学学院攻读研究型硕士学位。",
-    },
   ],
 
   education: [

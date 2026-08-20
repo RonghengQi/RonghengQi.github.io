@@ -50,23 +50,6 @@ export const about = [
    <a href="${CV_URL}" target="_blank" rel="noopener noreferrer">my CV here</a>.`,
 ];
 
-// The following section is retained from the template until real news is supplied.
-export const news = [
-  {
-    date: "Jun 2026",
-    text: `Presented preliminary findings from my MRes thesis
-           at the 16th UCL RDR Annual Academic Conference.`,
-  },
-  {
-    date: "Dec 2025",
-    text: `Submitted a research manuscript for peer review.`,
-  },
-  {
-    date: "Sep 2025",
-    text: `Started as an MRes student at UCL.`,
-  },
-];
-
 export const education = [
   {
     org: "University College London",
