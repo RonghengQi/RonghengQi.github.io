@@ -1,4 +1,6 @@
 import photo from "./assets/photo.jpg";
+import cugLogo from "./assets/logos/cug.png";
+import uclLogo from "./assets/logos/ucl.svg";
 import buildingDamageFigure from "./assets/research/building-damage-xai.png";
 import floodRiskFigure from "./assets/research/building-scale-flood-risk.jpg";
 import urbanFloodEmsFigure from "./assets/research/urban-flood-ems.jpg";
@@ -53,6 +55,7 @@ export const about = [
 export const education = [
   {
     org: "University College London",
+    logo: uclLogo,
     desc: "Master of Research in Risk and Disaster Reduction · Grade: 70.70/100 (Distinction)",
     role: "London, United Kingdom",
     date: "Sep 2025 - Dec 2026 (expected)",
@@ -60,6 +63,7 @@ export const education = [
   },
   {
     org: "China University of Geosciences",
+    logo: cugLogo,
     desc: "Bachelor of Management Science in Emergency Management · Grade: 90.31/100",
     role: "Wuhan, China",
     date: "Sep 2021 - Jun 2025",

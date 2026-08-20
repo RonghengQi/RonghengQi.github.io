@@ -12,7 +12,7 @@ import LocalizedText from "./LocalizedText.astro";
 //   desc   one or two sentences on what it is
 //   role   your role, advisor, or anything secondary; inline HTML is allowed
 //   date   right-hand column; keep the format consistent across sections
-//   logo   imported image, shown at 48px
+//   logo   imported image, fitted inside a 72 × 48px area
 //   image  imported display image, shown full-width below the entry
 //   imageAlt meaningful alternative text for the display image
 //   url    makes `org` a link
@@ -32,8 +32,8 @@ const withLogo = items.some((e) => e.logo);
               <Image
                 src={e.logo}
                 alt=""
-                widths={[48, 96, 144]}
-                sizes="48px"
+                widths={[72, 144]}
+                sizes="72px"
                 loading="lazy"
               />
             )}
