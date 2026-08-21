@@ -1,5 +1,7 @@
 import photo from "./assets/photo.jpg";
+import badongNaturalResourcesLogo from "./assets/logos/badong-natural-resources.png";
 import cugLogo from "./assets/logos/cug.png";
+import piesatLogo from "./assets/logos/piesat.png";
 import uclLogo from "./assets/logos/ucl.svg";
 import buildingDamageFigure from "./assets/research/building-damage-xai.png";
 import floodRiskFigure from "./assets/research/building-scale-flood-risk.jpg";
@@ -156,7 +158,7 @@ export const experience = [
   {
     org: "Post-Pandemic Work Resumption Policy Analysis",
     desc: "Structuring and classifying more than 100,000 words of economic, transport and public-health policy documents from seven major Chinese cities.",
-    role: "Research Assistant · Advisers: Prof. Pengjun Zhao and Prof. Qiyang Liu · Peking University Shenzhen Graduate School",
+    role: 'Research Assistant · Advisers: Prof. Pengjun Zhao and Prof. Qiyang Liu · <span class="institution-nowrap">Peking University Shenzhen Graduate School</span>',
     date: "Jul 2022 - Sep 2022",
   },
 ];
@@ -164,12 +166,14 @@ export const experience = [
 export const workExperience = [
   {
     org: "PIESAT Information Technology Co., Ltd",
+    logo: piesatLogo,
     desc: "Conducted multi-hazard risk assessments for four Hubei cities, produced more than 20 standardised zoning maps, and contributed to eight official disaster-governance deliverables.",
     role: "Disaster Analyst Intern · Emergency Management Department · Wuhan, China",
     date: "Dec 2024 - Feb 2025",
   },
   {
     org: "Natural Resources and Planning Bureau of Badong County",
+    logo: badongNaturalResourcesLogo,
     desc: "Supported active-landslide field investigations using UAV and GPS data, and processed Sentinel-2 and Landsat-8 imagery for vegetation, water and terrain analysis.",
     role: "Geospatial Analyst Intern · Disaster Prevention Department · Enshi, China",
     date: "Jul 2023 - Aug 2023",

@@ -490,6 +490,9 @@ section hr {
   font-size: 15.5px;
   margin: 4px 0 0;
 }
+.institution-nowrap {
+  white-space: nowrap;
+}
 .entry-date {
   font-size: 15px;
   white-space: nowrap; /* dates must not wrap, or the right column breaks up */
@@ -547,6 +550,9 @@ footer {
   }
   .entry-date {
     grid-column: 2;
+    white-space: normal;
+  }
+  .institution-nowrap {
     white-space: normal;
   }
   .entries:not(.has-logo) .entry {
