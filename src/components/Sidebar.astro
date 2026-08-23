@@ -44,15 +44,38 @@ import ThemeToggle from "./ThemeToggle.astro";
       )
     }
     {
-      profile.links.map((l, i) => (
-        <a
-          href={l.href}
-          target={l.newTab ? "_blank" : undefined}
-          rel={l.newTab ? "noopener noreferrer" : undefined}
-        >
-          <LocalizedText en={l.label} zh={zh.profile.links[i]} />
-        </a>
-      ))
+      profile.links.map((l, i) =>
+        l.hrefZh ? (
+          <>
+            <a
+              lang="en"
+              data-lang-content="en"
+              href={l.href}
+              target={l.newTab ? "_blank" : undefined}
+              rel={l.newTab ? "noopener noreferrer" : undefined}
+            >
+              {l.label}
+            </a>
+            <a
+              lang="zh-CN"
+              data-lang-content="zh"
+              href={l.hrefZh}
+              target={l.newTab ? "_blank" : undefined}
+              rel={l.newTab ? "noopener noreferrer" : undefined}
+            >
+              {zh.profile.links[i]}
+            </a>
+          </>
+        ) : (
+          <a
+            href={l.href}
+            target={l.newTab ? "_blank" : undefined}
+            rel={l.newTab ? "noopener noreferrer" : undefined}
+          >
+            <LocalizedText en={l.label} zh={zh.profile.links[i]} />
+          </a>
+        ),
+      )
     }
     <LanguageToggle />
     {site.theme.toggle && <ThemeToggle />}

@@ -8,7 +8,8 @@ import floodRiskFigure from "./assets/research/building-scale-flood-risk.jpg";
 import urbanFloodEmsFigure from "./assets/research/urban-flood-ems.jpg";
 import yangtzeResilienceFigure from "./assets/research/yangtze-resilience.png";
 
-export const CV_URL = "Rongheng_Qi_CV_Aug2026.pdf";
+export const CV_URL_EN = "Rongheng_Qi_CV_EN.pdf";
+export const CV_URL_ZH = "Rongheng_Qi_CV_ZH.pdf";
 
 export const profile = {
   nameEn: "Rongheng Qi",
@@ -31,7 +32,12 @@ export const profile = {
       href: "https://github.com/RonghengQi",
       newTab: true,
     },
-    { label: "CV (PDF)", href: CV_URL, newTab: true },
+    {
+      label: "CV (PDF)",
+      href: CV_URL_EN,
+      hrefZh: CV_URL_ZH,
+      newTab: true,
+    },
   ],
 };
 
