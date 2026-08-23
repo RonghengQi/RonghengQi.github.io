@@ -211,11 +211,11 @@ export const awards = [
     date: "2024",
   },
   {
-    org: "Provincial Outstanding Team, Summer Social Practice Program",
+    org: "Outstanding Team, Summer Social Practice Program, Hubei Province",
     date: "2024",
   },
   {
-    org: "First Prize, 2023 International Mathematics Modeling Contest for Higher Education",
+    org: "Finalist, 2023 International Mathematics Modeling Contest for Higher Education",
     date: "2023",
   },
   {
@@ -228,7 +228,7 @@ export const teaching = [];
 
 export const skills = [
   {
-    org: "Geospatial and Data Tools",
+    org: "Programming & Software",
     desc: "Python · ArcGIS Pro · Google Earth Engine · RStudio · SPSS · Overleaf",
   },
   {

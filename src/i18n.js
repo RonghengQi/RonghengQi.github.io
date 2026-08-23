@@ -127,7 +127,7 @@ export const zh = {
     { org: "中国地质大学第三十五届科技论文报告会一等奖", date: "2025年" },
     { org: "国家级大学生创新训练计划优秀结题", date: "2024年" },
     { org: "中国地质大学优秀学生干部", date: "2024年" },
-    { org: "暑期社会实践活动省级优秀团队", date: "2024年" },
+    { org: "湖北省暑期社会实践活动优秀团队", date: "2024年" },
     { org: "2023年高等教育国际数学建模竞赛一等奖", date: "2023年" },
     { org: "中国地质大学青年志愿服务项目大赛一等奖", date: "2023年" },
   ],
@@ -136,7 +136,7 @@ export const zh = {
 
   skills: [
     {
-      org: "地理空间与数据工具",
+      org: "编程与软件",
       desc: "Python · ArcGIS Pro · Google Earth Engine · RStudio · SPSS · Overleaf",
     },
     {
