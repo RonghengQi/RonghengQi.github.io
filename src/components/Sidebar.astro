@@ -29,50 +29,76 @@ const iconStyle = (icon) => `--side-icon: url("${icon.src}")`;
       fetchpriority="high"
     />
   </div>
-  <div>
+  <div class="side-details">
     <h2 class="side-name">
       <LocalizedText en={profile.nameEn} zh={profile.nameCn} />
     </h2>
-    <div class="side-item side-role muted">
-      <span
-        class="side-icon"
-        aria-hidden="true"
-        style={iconStyle(educationIcon)}></span>
-      <p>
-        {
-          profile.role.map((line, i) => (
-            <span>
-              <LocalizedText en={line} zh={zh.profile.role[i]} />
-              {i < profile.role.length - 1 && <br />}
-            </span>
-          ))
-        }
-      </p>
-    </div>
-  </div>
-  <div class="side-links">
-    {
-      profile.location && (
-        <span class="side-item muted">
-          <span
-            class="side-icon"
-            aria-hidden="true"
-            style={iconStyle(locationIcon)}
-          />
-          <span>
-            <LocalizedText en={profile.location} zh={zh.profile.location} />
-          </span>
+    <p class="side-role muted">
+      <LocalizedText en={profile.role[0]} zh={zh.profile.role[0]} />
+    </p>
+    <div class="side-links">
+      <span class="side-item muted">
+        <span
+          class="side-icon"
+          aria-hidden="true"
+          style={iconStyle(educationIcon)}
+        />
+        <span>
+          <LocalizedText en={profile.role[1]} zh={zh.profile.role[1]} />
         </span>
-      )
-    }
-    {
-      profile.links.map((l, i) =>
-        l.hrefZh ? (
-          <>
+      </span>
+      {
+        profile.location && (
+          <span class="side-item muted">
+            <span
+              class="side-icon"
+              aria-hidden="true"
+              style={iconStyle(locationIcon)}
+            />
+            <span>
+              <LocalizedText en={profile.location} zh={zh.profile.location} />
+            </span>
+          </span>
+        )
+      }
+      {
+        profile.links.map((l, i) =>
+          l.hrefZh ? (
+            <>
+              <a
+                class="side-item"
+                lang="en"
+                data-lang-content="en"
+                href={l.href}
+                target={l.newTab ? "_blank" : undefined}
+                rel={l.newTab ? "noopener noreferrer" : undefined}
+              >
+                <span
+                  class="side-icon"
+                  aria-hidden="true"
+                  style={iconStyle(linkIcons[i])}
+                />
+                <span>{l.label}</span>
+              </a>
+              <a
+                class="side-item"
+                lang="zh-CN"
+                data-lang-content="zh"
+                href={l.hrefZh}
+                target={l.newTab ? "_blank" : undefined}
+                rel={l.newTab ? "noopener noreferrer" : undefined}
+              >
+                <span
+                  class="side-icon"
+                  aria-hidden="true"
+                  style={iconStyle(linkIcons[i])}
+                />
+                <span>{zh.profile.links[i]}</span>
+              </a>
+            </>
+          ) : (
             <a
               class="side-item"
-              lang="en"
-              data-lang-content="en"
               href={l.href}
               target={l.newTab ? "_blank" : undefined}
               rel={l.newTab ? "noopener noreferrer" : undefined}
@@ -82,45 +108,16 @@ const iconStyle = (icon) => `--side-icon: url("${icon.src}")`;
                 aria-hidden="true"
                 style={iconStyle(linkIcons[i])}
               />
-              <span>{l.label}</span>
+              <span>
+                <LocalizedText en={l.label} zh={zh.profile.links[i]} />
+              </span>
             </a>
-            <a
-              class="side-item"
-              lang="zh-CN"
-              data-lang-content="zh"
-              href={l.hrefZh}
-              target={l.newTab ? "_blank" : undefined}
-              rel={l.newTab ? "noopener noreferrer" : undefined}
-            >
-              <span
-                class="side-icon"
-                aria-hidden="true"
-                style={iconStyle(linkIcons[i])}
-              />
-              <span>{zh.profile.links[i]}</span>
-            </a>
-          </>
-        ) : (
-          <a
-            class="side-item"
-            href={l.href}
-            target={l.newTab ? "_blank" : undefined}
-            rel={l.newTab ? "noopener noreferrer" : undefined}
-          >
-            <span
-              class="side-icon"
-              aria-hidden="true"
-              style={iconStyle(linkIcons[i])}
-            />
-            <span>
-              <LocalizedText en={l.label} zh={zh.profile.links[i]} />
-            </span>
-          </a>
-        ),
-      )
-    }
-    <LanguageToggle />
-    {site.theme.toggle && <ThemeToggle />}
+          ),
+        )
+      }
+      <LanguageToggle />
+      {site.theme.toggle && <ThemeToggle />}
+    </div>
   </div>
 </aside>
 

@@ -15,7 +15,7 @@ export const profile = {
   nameEn: "Rongheng Qi",
   nameCn: "齐荣衡",
   role: [
-    "MRes Student in Risk and Disaster Reduction,",
+    "MRes Student in Risk and Disaster Reduction",
     "University College London",
   ],
   location: "London, United Kingdom",

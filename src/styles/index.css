@@ -201,11 +201,7 @@ aside {
 .side-role {
   font-size: 16px;
   line-height: 1.55;
-  margin-top: 8px;
-  align-items: start;
-}
-.side-role p {
-  margin: 0;
+  margin: 8px 0 0;
 }
 .side-links {
   display: flex;
@@ -214,6 +210,7 @@ aside {
   gap: 10px;
   font-size: 15.5px;
   line-height: 1.4;
+  margin-top: 14px;
 }
 .side-item {
   display: grid;
@@ -228,9 +225,6 @@ aside {
   background: currentColor;
   -webkit-mask: var(--side-icon) center / contain no-repeat;
   mask: var(--side-icon) center / contain no-repeat;
-}
-.side-role .side-icon {
-  margin-top: 0.28em;
 }
 .side-links a {
   text-decoration: none;
