@@ -195,6 +195,14 @@ export const awards = [
     date: "2026",
   },
   {
+    org: "Excellent Completion, National College Student Innovation Training Program",
+    date: "2025",
+  },
+  {
+    org: "Excellent Completion, National College Student Innovation and Entrepreneurship Training Program",
+    date: "2024",
+  },
+  {
     org: "Excellent student Cadre of China University of Geosciences",
     date: "2024",
   },
@@ -203,7 +211,7 @@ export const awards = [
     date: "2024",
   },
   {
-    org: "Finalist of 2023 International Mathematics Molding Contest for Higher Education",
+    org: "First Prize in the 2023 International Mathematics Modeling Contest for Higher Education",
     date: "2023",
   },
   {
