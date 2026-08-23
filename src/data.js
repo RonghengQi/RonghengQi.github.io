@@ -191,31 +191,35 @@ export const projects = [];
 // These award examples are retained from the original template.
 export const awards = [
   {
-    org: "Best Thesis Poster of RDR Master",
+    org: "Best Thesis Poster, MRes/Msc Risk and Disaster Reduction, University College London",
     date: "2026",
   },
   {
-    org: "Excellent Completion, National College Student Innovation Training Program",
+    org: "Excellent Completion, National College Student Innovation Training Program, China University of Geosciences",
     date: "2025",
   },
   {
-    org: "Excellent Completion, National College Student Innovation and Entrepreneurship Training Program",
+    org: "First Prize, 35th Science and Technology Paper Presentation, China University of Geosciences",
+    date: "2025",
+  },
+  {
+    org: "Excellent Completion, National College Student Innovation Training Program, China University of Geosciences",
     date: "2024",
   },
   {
-    org: "Excellent student Cadre of China University of Geosciences",
+    org: "Outstanding Student Cadre, China University of Geosciences",
     date: "2024",
   },
   {
-    org: "Provincial Excellent Team of Summer Social Practice Activities",
+    org: "Provincial Outstanding Team, Summer Social Practice Program",
     date: "2024",
   },
   {
-    org: "First Prize in the 2023 International Mathematics Modeling Contest for Higher Education",
+    org: "First Prize, 2023 International Mathematics Modeling Contest for Higher Education",
     date: "2023",
   },
   {
-    org: "First Prize of Youth Volunteer Service Project Competition of China University of Geosciences",
+    org: "First Prize, Youth Volunteer Service Project Competition, China University of Geosciences",
     date: "2023",
   },
 ];
