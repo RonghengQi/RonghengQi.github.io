@@ -1,11 +1,20 @@
 ---
 import { Image } from "astro:assets";
+import cvIcon from "../assets/sidebar/cv.png";
+import educationIcon from "../assets/sidebar/education.png";
+import emailIcon from "../assets/sidebar/email.png";
+import githubIcon from "../assets/sidebar/github.png";
+import linkedinIcon from "../assets/sidebar/linkedin.png";
+import locationIcon from "../assets/sidebar/location.png";
 import { profile } from "../data.js";
 import { zh } from "../i18n.js";
 import { site } from "../site.config.js";
 import LanguageToggle from "./LanguageToggle.astro";
 import LocalizedText from "./LocalizedText.astro";
 import ThemeToggle from "./ThemeToggle.astro";
+
+const linkIcons = [emailIcon, linkedinIcon, githubIcon, cvIcon];
+const iconStyle = (icon) => `--side-icon: url("${icon.src}")`;
 ---
 
 <aside>
@@ -24,22 +33,35 @@ import ThemeToggle from "./ThemeToggle.astro";
     <h2 class="side-name">
       <LocalizedText en={profile.nameEn} zh={profile.nameCn} />
     </h2>
-    <p class="side-role muted">
-      {
-        profile.role.map((line, i) => (
-          <span>
-            <LocalizedText en={line} zh={zh.profile.role[i]} />
-            {i < profile.role.length - 1 && <br />}
-          </span>
-        ))
-      }
-    </p>
+    <div class="side-item side-role muted">
+      <span
+        class="side-icon"
+        aria-hidden="true"
+        style={iconStyle(educationIcon)}></span>
+      <p>
+        {
+          profile.role.map((line, i) => (
+            <span>
+              <LocalizedText en={line} zh={zh.profile.role[i]} />
+              {i < profile.role.length - 1 && <br />}
+            </span>
+          ))
+        }
+      </p>
+    </div>
   </div>
   <div class="side-links">
     {
       profile.location && (
-        <span class="muted">
-          <LocalizedText en={profile.location} zh={zh.profile.location} />
+        <span class="side-item muted">
+          <span
+            class="side-icon"
+            aria-hidden="true"
+            style={iconStyle(locationIcon)}
+          />
+          <span>
+            <LocalizedText en={profile.location} zh={zh.profile.location} />
+          </span>
         </span>
       )
     }
@@ -48,31 +70,51 @@ import ThemeToggle from "./ThemeToggle.astro";
         l.hrefZh ? (
           <>
             <a
+              class="side-item"
               lang="en"
               data-lang-content="en"
               href={l.href}
               target={l.newTab ? "_blank" : undefined}
               rel={l.newTab ? "noopener noreferrer" : undefined}
             >
-              {l.label}
+              <span
+                class="side-icon"
+                aria-hidden="true"
+                style={iconStyle(linkIcons[i])}
+              />
+              <span>{l.label}</span>
             </a>
             <a
+              class="side-item"
               lang="zh-CN"
               data-lang-content="zh"
               href={l.hrefZh}
               target={l.newTab ? "_blank" : undefined}
               rel={l.newTab ? "noopener noreferrer" : undefined}
             >
-              {zh.profile.links[i]}
+              <span
+                class="side-icon"
+                aria-hidden="true"
+                style={iconStyle(linkIcons[i])}
+              />
+              <span>{zh.profile.links[i]}</span>
             </a>
           </>
         ) : (
           <a
+            class="side-item"
             href={l.href}
             target={l.newTab ? "_blank" : undefined}
             rel={l.newTab ? "noopener noreferrer" : undefined}
           >
-            <LocalizedText en={l.label} zh={zh.profile.links[i]} />
+            <span
+              class="side-icon"
+              aria-hidden="true"
+              style={iconStyle(linkIcons[i])}
+            />
+            <span>
+              <LocalizedText en={l.label} zh={zh.profile.links[i]} />
+            </span>
           </a>
         ),
       )

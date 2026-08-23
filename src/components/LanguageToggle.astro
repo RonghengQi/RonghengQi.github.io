@@ -1,12 +1,13 @@
 ---
 // The visible label is the language the visitor will switch to.
+import languageIcon from "../assets/sidebar/language.png";
 ---
 
-<button type="button" class="language-toggle" data-language-toggle>
-  <svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true">
-    <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.8"></circle>
-    <path d="M3.5 12h17M12 3c2.2 2.4 3.4 5.4 3.4 9S14.2 18.6 12 21M12 3C9.8 5.4 8.6 8.4 8.6 12s1.2 6.6 3.4 9" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"></path>
-  </svg>
+<button type="button" class="side-item language-toggle" data-language-toggle>
+  <span
+    class="side-icon"
+    aria-hidden="true"
+    style={`--side-icon: url("${languageIcon.src}")`}></span>
   <span class="when-english">中文</span>
   <span class="when-chinese">English</span>
 </button>

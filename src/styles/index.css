@@ -201,7 +201,11 @@ aside {
 .side-role {
   font-size: 16px;
   line-height: 1.55;
-  margin: 8px 0 0;
+  margin-top: 8px;
+  align-items: start;
+}
+.side-role p {
+  margin: 0;
 }
 .side-links {
   display: flex;
@@ -210,6 +214,23 @@ aside {
   gap: 10px;
   font-size: 15.5px;
   line-height: 1.4;
+}
+.side-item {
+  display: grid;
+  grid-template-columns: 18px minmax(0, 1fr);
+  align-items: center;
+  column-gap: 9px;
+  width: 100%;
+}
+.side-icon {
+  width: 16px;
+  height: 16px;
+  background: currentColor;
+  -webkit-mask: var(--side-icon) center / contain no-repeat;
+  mask: var(--side-icon) center / contain no-repeat;
+}
+.side-role .side-icon {
+  margin-top: 0.28em;
 }
 .side-links a {
   text-decoration: none;
@@ -222,15 +243,13 @@ aside {
    a button, so it does not compete with the content. */
 .theme-toggle,
 .language-toggle {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
   padding: 0;
   border: 0;
   background: none;
   font: inherit;
   font-size: 15.5px;
   line-height: 1.4;
+  text-align: left;
   color: var(--color-link);
   cursor: pointer;
 }
@@ -239,16 +258,6 @@ aside {
   color: var(--color-accent);
   text-decoration: underline;
 }
-.theme-toggle svg,
-.language-toggle svg {
-  flex: none;
-}
-.theme-toggle > span,
-.language-toggle > span {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-}
 /* Show the label for the theme you would switch *to*. Both are in the HTML so
    the button is correct even if the script has not run yet. */
 .theme-toggle .when-dark,
@@ -256,7 +265,7 @@ aside {
   display: none;
 }
 :root[data-theme="dark"] .theme-toggle .when-dark {
-  display: inline-flex;
+  display: inline;
 }
 
 /* Like the theme switch, the language switch names the destination. */
@@ -265,7 +274,7 @@ aside {
   display: none;
 }
 :root[data-lang="zh"] .language-toggle .when-chinese {
-  display: inline-flex;
+  display: inline;
 }
 
 /* — Main column —
