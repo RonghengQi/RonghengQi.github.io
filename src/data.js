@@ -191,7 +191,7 @@ export const projects = [];
 // These award examples are retained from the original template.
 export const awards = [
   {
-    org: "Best Thesis Poster, MRes/Msc Risk and Disaster Reduction, University College London",
+    org: "Best MRes/Msc Poster, 16th UCL Risk and Disaster Reduction Annual Conference, University College London",
     date: "2026",
   },
   {
@@ -215,7 +215,7 @@ export const awards = [
     date: "2024",
   },
   {
-    org: "Finalist, 2023 International Mathematics Modeling Contest for Higher Education",
+    org: "Finalist, International Mathematics Modeling Contest for Higher Education",
     date: "2023",
   },
   {
