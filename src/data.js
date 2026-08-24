@@ -45,7 +45,7 @@ export const about = [
   `I am currently an MRes student in Risk and Disaster Reduction at
    <a href="https://www.ucl.ac.uk/risk-disaster-reduction/">University College London</a>,
    advised by Prof. <a href="https://profiles.ucl.ac.uk/89003-saman-ghaffarian">Saman Ghaffarian</a>
-   and Prof. <a href="https://profiles.ucl.ac.uk/90166-mark-pelling/publications">Mark Pelling</a>.
+   and Prof. <a href="https://profiles.ucl.ac.uk/90166-mark-pelling/about">Mark Pelling</a>.
    I previously earned my Bachelor of Management Science in Emergency Management at
    <a href="https://en.cug.edu.cn/">China University of Geosciences</a>,
    advised by Prof. <a href="https://grzy.cug.edu.cn/ruanbanxiao/zh_CN/index.htm">Banxiao Ruan</a>

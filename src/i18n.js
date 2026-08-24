@@ -22,7 +22,7 @@ export const zh = {
   },
 
   about: [
-    `我目前在<a href="https://www.ucl.ac.uk/risk-disaster-reduction/">伦敦大学学院</a>攻读风险与减灾研究型硕士，导师为<a href="https://profiles.ucl.ac.uk/89003-saman-ghaffarian">Saman Ghaffarian</a>教授和<a href="https://profiles.ucl.ac.uk/90166-mark-pelling/publications">Mark Pelling</a>教授。我此前在<a href="https://en.cug.edu.cn/">中国地质大学</a>获得应急管理专业管理学学士学位，本科导师为<a href="https://grzy.cug.edu.cn/ruanbanxiao/zh_CN/index.htm">阮班晓</a>教授和<a href="https://grzy.cug.edu.cn/lishixiang/zh_CN/index.htm">李世祥</a>教授。`,
+    `我目前在<a href="https://www.ucl.ac.uk/risk-disaster-reduction/">伦敦大学学院</a>攻读风险与减灾研究型硕士，导师为<a href="https://profiles.ucl.ac.uk/89003-saman-ghaffarian">Saman Ghaffarian</a>教授和<a href="https://profiles.ucl.ac.uk/90166-mark-pelling/about">Mark Pelling</a>教授。我此前在<a href="https://en.cug.edu.cn/">中国地质大学</a>获得应急管理专业管理学学士学位，本科导师为<a href="https://grzy.cug.edu.cn/ruanbanxiao/zh_CN/index.htm">阮班晓</a>教授和<a href="https://grzy.cug.edu.cn/lishixiang/zh_CN/index.htm">李世祥</a>教授。`,
     `我的研究聚焦灾害风险降低、应急响应、地理空间分析与 GeoAI。我结合遥感、GIS、机器学习和可解释人工智能，研究城市洪涝、灾后建筑损毁、紧急医疗服务可达性及城市韧性。`,
     `我的研究兴趣在于运用人工智能、遥感技术和地理空间数据开展脆弱性与韧性评估、灾后恢复监测和灾害损失建模。我希望通过将复杂的数据和模型转化为决策者可在灾害与危机情境中使用的实用信息，为战略性灾害风险管理提供支持。`,
   ],
