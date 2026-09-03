@@ -10,6 +10,7 @@ import LocalizedText from "./LocalizedText.astro";
 // Every field except `org` is optional:
 //   org    institution, project or course name (bold)
 //   desc   one or two sentences on what it is
+//   grade  academic grade, shown on its own line below the degree
 //   role   your role, advisor, or anything secondary; inline HTML is allowed
 //   date   right-hand column; keep the format consistent across sections
 //   logo   imported image, fitted inside a 72 × 48px area
@@ -57,6 +58,13 @@ const withLogo = items.some((e) => e.logo);
             e.desc && (
               <p class="entry-desc">
                 <LocalizedText en={e.desc} zh={translations[i]?.desc} />
+              </p>
+            )
+          }
+          {
+            e.grade && (
+              <p class="entry-desc entry-grade">
+                <LocalizedText en={e.grade} zh={translations[i]?.grade} />
               </p>
             )
           }
