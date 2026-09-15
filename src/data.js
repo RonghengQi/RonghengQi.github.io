@@ -160,7 +160,7 @@ export const experience = [
     image: yangtzeResilienceFigure,
     imageAlt:
       "Urban resilience groups across the Yangtze River Economic Belt in 2013 and 2022",
-    role: "Research Assistant · Advisers: Prof. Banxiao Ruan and Prof. Shixiang Li · China University of Geosciences",
+    role: "National College Student Innovation Training Program · Advisers: Prof. Banxiao Ruan and Prof. Shixiang Li · China University of Geosciences",
     date: "May 2023 - Jan 2025",
   },
   {
