@@ -4,7 +4,7 @@ export const zh = {
   profile: {
     role: ["风险与减灾研究型硕士生", "伦敦大学学院"],
     location: "英国伦敦",
-    links: ["邮箱", "LinkedIn", "GitHub", "简历（PDF）"],
+    links: ["邮箱", "LinkedIn", "GitHub", "简历"],
   },
 
   sections: {

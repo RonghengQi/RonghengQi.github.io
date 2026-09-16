@@ -33,7 +33,7 @@ export const profile = {
       newTab: true,
     },
     {
-      label: "CV (PDF)",
+      label: "CV",
       href: CV_URL_EN,
       hrefZh: CV_URL_ZH,
       newTab: true,
